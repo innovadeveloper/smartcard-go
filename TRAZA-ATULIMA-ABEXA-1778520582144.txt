@@ -1,0 +1,534 @@
+05-11 12:29:25.577 24781 24781 I Log[NFC-AtuLima]->: ========Load xml and initialize sam==== 
+05-11 12:29:25.808 24781 24781 I Log[NFC-AtuLima]->: samExchange tx => 80a400000364000000 
+05-11 12:29:25.824 24781 24781 I Log[NFC-AtuLima]->: samExchange rx <= deee0c970987720b3e827e6890af 
+05-11 12:29:25.825 24781 24781 I Log[NFC-AtuLima]->: samExchange tx => 80a4000014c2b23ac38559a75378edf24743a4de5d20f7ae2100 
+05-11 12:29:25.832 24781 24781 I Log[NFC-AtuLima]->: samExchange rx <= 48c346235e8dd047e920c43d41c1c4b442850fe9efd51c7090af 
+05-11 12:29:25.833 24781 24781 I Log[NFC-AtuLima]->: samExchange tx => 80a400002066ec52bc01a7cfae3ac0944ae7a2097b7648213dbdc0734bf9556a9fbb109e7300 
+05-11 12:29:25.844 24781 24781 I Log[NFC-AtuLima]->: samExchange rx <= 37f77b41e56d46736c00a57139d9fc7f9000 
+05-11 12:29:25.845 24781 24781 I Log[NFC-AtuLima]->: samExchange tx => 8060000000 
+05-11 12:29:25.850 24781 24781 I Log[NFC-AtuLima]->: samExchange rx <= 0401010302280104010103022801043430fa8e7080201723000008091500a29000 
+05-11 12:29:33.234 24781 24781 I Log[NFC-AtuLima]->: ========READ FULL CARD==== 
+05-11 12:29:33.235 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 905a000003f2106000 
+05-11 12:29:33.238 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 9100 
+05-11 12:29:33.239 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 9060000000 
+05-11 12:29:33.241 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 0401013300160591af 
+05-11 12:29:33.242 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.244 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 0401010300160591af 
+05-11 12:29:33.245 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.247 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 042f76ca8e2390214335303045259100 
+05-11 12:29:33.248 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90aa0000010700 
+05-11 12:29:33.252 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= b8235ef7dbd967c340c55b15a743fdb991af 
+05-11 12:29:33.253 24781 24781 I Log[NFC-AtuLima]->: samExchange tx => 800a1100220900b8235ef7dbd967c340c55b15a743fdb9042f76ca8e239000fbd0893571dc6fff00 
+05-11 12:29:33.264 24781 24781 I Log[NFC-AtuLima]->: samExchange rx <= 0166006046956ac3de81c91c52303b1c06d9d1a588d765158627a6f7120c700d90af 
+05-11 12:29:33.265 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af0000200166006046956ac3de81c91c52303b1c06d9d1a588d765158627a6f7120c700d00 
+05-11 12:29:33.269 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 448512540f898d14aaf517bd076413759100 
+05-11 12:29:33.270 24781 24781 I Log[NFC-AtuLima]->: samExchange tx => 800a000010448512540f898d14aaf517bd07641375 
+05-11 12:29:33.275 24781 24781 I Log[NFC-AtuLima]->: samExchange rx <= 9000 
+05-11 12:29:33.276 24781 24781 I Log[NFC-AtuLima]->: samExchange tx => 80d5000000 
+05-11 12:29:33.280 24781 24781 I Log[NFC-AtuLima]->: samExchange rx <= b866dd71fbab3d793c08d74ab7495c3d9000 
+05-11 12:29:33.280 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd0000070000000020000000 
+05-11 12:29:33.286 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 63c96ab4cbcd22e505d8f6d352ba5149f328b39e7a0cc53fa8bb09e418e028bf05b86b75cd7703242befd77a629433bb9100 
+05-11 12:29:33.287 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd000007010000002f000000 
+05-11 12:29:33.292 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= e701fae5fcb4a1439c1c7c27709c19ed8e53c244a4eaa6cd5fd5d350199641b8d4b46618465853ca409b6a35f3c0a31b91af 
+05-11 12:29:33.293 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.296 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 64d0ba2da22d824d0aa6597b0a542d369100 
+05-11 12:29:33.296 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd0000070200000031000000 
+05-11 12:29:33.302 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 1c3ce584d08e19f561e93f4f36d4524f6ce96374def0f71ccaf79885d14fdee9b84948c33442a83113d26dcb0a51834891af 
+05-11 12:29:33.303 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.305 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= f460f29f83c5c984394429bbc6c112029100 
+05-11 12:29:33.306 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd000007030000004e000000 
+05-11 12:29:33.311 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 9d7d879b7839afae6653ff81af498ad16a88e495caa1b47c34133a8c04084f253a7807d337e1eda997132440f23576d791af 
+05-11 12:29:33.312 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.316 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= cd17ebbe875524819507a5c47563b4b4cbf930155ba39baf1f3e2206e10a3744b1b0984b86087c19e420c0cdf2a742409100 
+05-11 12:29:33.317 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd000007040000004e000000 
+05-11 12:29:33.322 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 9bfe89f733a2b4968b993c7083d6734020be9f963351d78cc5bec285290323b039846dc4591068d012decd6c11a3cd7591af 
+05-11 12:29:33.323 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.327 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 6ee31a5d6f1eb0ded8cabaa7171acf574deb1f859dd6b51d6600b594a8825a0f7263ada6eac6748d0ebebb5ff76bde9d9100 
+05-11 12:29:33.328 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd000007050000004e000000 
+05-11 12:29:33.333 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= d601f5e1fd382290907718a9668f6f4868a41f340733f9a8511ebb3b9d44cb3646caafbbea249c8772ade7c2fc5f1c3091af 
+05-11 12:29:33.334 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.338 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 73ccba7c3109359b3553019f8f392fe434c3e31ebdce9f4487164793566673be932e9ae0d8bb581d474f69bf231ebb359100 
+05-11 12:29:33.339 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 906c0000010700 
+05-11 12:29:33.343 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 286ae88c7062f3a9610c46c6394298cd9100 
+05-11 12:29:33.344 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb0000070800000001000000 
+05-11 12:29:33.349 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 787cd690d0240f29f8ee2f3b7e6e2a2d675de064b77e46be0858293486ef28d4984e0d2e0458a08958182eb4f0cc24e29100 
+05-11 12:29:33.350 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb0000070801000001000000 
+05-11 12:29:33.355 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= ed6a3c096616f0838aa1d85701d1f804cc4c58d3f37106e1fc382009c7d5dc47cb2701e11a605b1b0113b82f03ccc6e79100 
+05-11 12:29:33.356 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb0000070802000001000000 
+05-11 12:29:33.361 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 7625c240d9d1c35dc8f2815e1a0de01df3dc22ebcde88b4ef0b07506de8ecdb71cb54f88c8e7a58de95f9458ac515b429100 
+05-11 12:29:33.362 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb0000070803000001000000 
+05-11 12:29:33.367 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 3b3edaad3e2551c846816ca337dec6415aad7165b6d442481f5f21c0e8f97b343f96ed09a98259c88f46326e8d111c589100 
+05-11 12:29:33.368 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb0000070804000001000000 
+05-11 12:29:33.373 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 3be276c45401c737a68e95dfaa9f4b98a72d9a7a6acd9cfeaf7e1dcd43542add77729de0f26103bb2e05606da138f4c89100 
+05-11 12:29:33.374 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb0000070805000001000000 
+05-11 12:29:33.379 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= c55e6f4cbc6cae7b25b5acd6878bb4158e39caadbf5940991cefb1ecb429e4a4242fa6b40e73f6aec7e8b4f3175e19129100 
+05-11 12:29:33.380 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb0000070806000001000000 
+05-11 12:29:33.385 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 3d974319e93353d9b3569dccb4dd08f2033106aae1e9779eab3c809bf27ba21163448f566c9da394f2ff9a6058ebc1cb9100 
+05-11 12:29:33.386 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb0000070807000001000000 
+05-11 12:29:33.391 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= b755896cbe84ccafe2be53b72a2a199c83eadced50ad828cc6a2095ec0f3ed275ef63192778d19b635e61f0b75287e469100 
+05-11 12:29:33.392 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb0000070808000001000000 
+05-11 12:29:33.397 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 96a61081d6cdfbb217d4bd4ce3c26fea6abf0ae89865ed13c13dfb1dc755446c0e79a44606801d42ef3af10267247f4e9100 
+05-11 12:29:33.398 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb0000070809000001000000 
+05-11 12:29:33.403 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 3f0c113384c992189a94e4621ab9999f000544c756423d8ba40c79b1654908fe02d1327cd4a88438bca5aa698b69d82d9100 
+05-11 12:29:33.404 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb000007080a000001000000 
+05-11 12:29:33.409 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= b59f768eb55f5e02afbbfb2acc035b7e94a6ede6a026adce54343b152ce37e2bef97d2dc7f6fcc95c61209ccd835d4159100 
+05-11 12:29:33.410 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb000007080b000001000000 
+05-11 12:29:33.415 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 70ce503e15ee3cbf74729696ca6cf76a962a459ede3b3735db8632acd6e3f0a39cce3be8b31a5ce06406cfd661200ebf9100 
+05-11 12:29:33.416 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb000007080c000001000000 
+05-11 12:29:33.422 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 35de8c4acba0c6a0e133fc55f399a3abcc9fcc84cb503278895838435c32156c39e7c039f62849258d727f77e0c838929100 
+05-11 12:29:33.422 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb000007080d000001000000 
+05-11 12:29:33.428 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= cafc7a06c96285df505d8f1fe74618231efbf595d64e3bdc9d98a001c373831cedf98fa3d2f7f9153cf481ce35c56f749100 
+05-11 12:29:33.429 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb000007080e000001000000 
+05-11 12:29:33.434 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 034f9b5320c7bcd4ac1bb27fa394f8be64232d0180da9f14e1e4c5deae76764faf39357eb5832c0e62f013fd309f958b9100 
+05-11 12:29:33.435 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bb000007080f000001000000 
+05-11 12:29:33.440 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= d050359f0929688d2a3e9d5cd7a596d51070c5c957901391abae0990068fa1ef8bbfed832f6d6194ff09540f17788bfb9100 
+05-11 12:29:33.441 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd00000709000000c6000000 
+05-11 12:29:33.447 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= a24774ee3ace0f11b4aff1b5ca476e15a19d7d32a3be095004844b6b0a7eaca9347a5240e60755289a0c8a60830236d691af 
+05-11 12:29:33.447 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.452 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= a24b12fdc0e94e0057d5939804dd6798d83afa7eb3fac77dcde850e65eff5af37ddc56e8f81ac1b67b355cd71eb4ce7e91af 
+05-11 12:29:33.453 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.457 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 391b50ef4656a678702532aad7a67cd4fb6b9527c3a9839f3acfd56f92818f95ecfdacf1bbfb153038282742442585ff91af 
+05-11 12:29:33.458 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.462 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= f5244ff4a8efd2f8deadff5b862b81616342bbac619b6348d619dbd50192cfec35f3afb8f11884700f646f8e9e778a5b91af 
+05-11 12:29:33.463 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:33.466 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= f37440eb33d04f6661a4d54acc01257d9100 
+05-11 12:29:33.467 24781 24781 I Log[NFC-AtuLima]->: readFullCard result : 
+05-11 12:29:33.467 24781 24781 I Log[NFC-AtuLima]->:  0 
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->: readFullCard outputData : 
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:  {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     "UID": "042f76ca8e2390",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     "File0": {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IDTarjetaTIT": "0000000004005",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdEmisorTIT": 14000,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TipoTarjetaTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "VersionAplicacionTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "DisenoTarjetaTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdJuegosClavesTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdSAMInicializacionTIT": "043416FA8E7080",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdFabricanteTIT": 1,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFabricacionTIT": "28/04/2026T16:53:30"
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     "File1": {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NumeroClienteTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaNacimientoClienteTIT": "00/00/0000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdPerfil1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdEmpresaPerfil1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "DescuentoPerfil1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraInicioPerfil1": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFinPerfil1": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdPerfil22": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdEmpresaPerfil2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "DescuentoPerfil2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraInicioPerfil2": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFinPerfil2": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdPerfil3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdEmpresaPerfil3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "DescuentoPerfil3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraInicioPerfil3": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFinPerfil3": "00/00/1990T00:00:00"
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     "File2": {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdVendedorTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdPuntoVentaTIT": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraVentaTIT": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdSAMVentaTIT": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "Importe": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FormaPagoVentaTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NAutorizacionEMVTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraInicioValidezTIT": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFinValidezTIT": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "DNIClienteTIT": ""
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     "File3": {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TipoTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FlagsCaracteristicasT1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdEmpresaTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoTransaccionTITTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdVendedorTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdPuntoVentaTitulo1": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraVentaTitulo1": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdSAMVentaTitulo1": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "ImporteTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FormaPagoVentaTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoAutorizacionEMVTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "MultipersonaTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionOperadores1T1": "000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionZonas1T1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionOperadores2T1": "000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionZonas2T1": "0",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraInicioCadT1": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFinCadT1": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TiempoActivacionTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "ValidezDiariaT1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "ValidezHorariaT1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "LimiteViajesT1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "LimiteViajesDiaT1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "UltimoBonoT1": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     "File4": {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TipoTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FlagsCaracteristicasT2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdEmpresaTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoTransaccionTITTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdVendedorTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdPuntoVentaTitulo2": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraVentaTitulo2": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdSAMVentaTitulo2": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "ImporteTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FormaPagoVentaTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoAutorizacionEMVTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "MultipersonaTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionOperadores1T2": "000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionZonas1T2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionOperadores2T2": "000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionZonas2T2": "0",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraInicioCadT2": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFinCadT2": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TiempoActivacionTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "ValidezDiariaT2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "ValidezHorariaT2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "LimiteViajesT2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "LimiteViajesDiaT2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "UltimoBonoT2": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     "File5": {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TipoTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FlagsCaracteristicasT3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdEmpresaTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoTransaccionTITTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdVendedorTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdPuntoVentaTitulo3": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraVentaTitulo3": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdSAMVentaTitulo3": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "ImporteTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FormaPagoVentaTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoAutorizacionEMVTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "MultipersonaTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionOperadores1T3": "000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionZonas1T3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionOperadores2T3": "000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SeleccionZonas2T3": "0",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraInicioCadT3": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFinCadT3": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TiempoActivacionTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "ValidezDiariaT3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "ValidezHorariaT3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "LimiteViajesT3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "LimiteViajesDiaT3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "UltimoBonoT3": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     "File7_Valor": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     "File8": [
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         },
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "FechaHoraTransaccion": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTipoTransaccion": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdTitulo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "IdPuntoTransaccion": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesDescontadas": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:             "UnidadesRestantes": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         }
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     ],
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     "File9": {
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "EstadoTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NotransaccionTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoAccionTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoAccionGrupoTIT": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "EstadoTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "EstadoTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "EstadoTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "PrioridadTitulo1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "PrioridadTitulo2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "PrioridadTitulo3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FlagsControlViaje": "000000000000000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoEtapaTransbordo": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoPersonasEntrada": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoPersonasJuntasEtapa1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoPersonasJuntasEtapa2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoPersonasJuntasEtapa3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TarifaAcumuladaViaje": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoZonasOperador": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoZonasOperadorAnterior": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoZonasOperadorAntAnt": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoTransaccionEntradaPase": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoPosicionTituloValidado": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdOperadorServicioInicial": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraEntradaOpInicial": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "PuntoEntradaOpInicial": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TarifaOperadorInicial": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdOperadorServicioAnt": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraEntradaOpAnt": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "PuntoEntradaOpAnt": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TarifaOperadorAnt": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdOperadorServicio": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraEntradaOp": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "PuntoEntradaOp": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TarifaOperador": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraSalidaOp": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "PuntoSalidaOp": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdOperadorServicioComp": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraEntradaOpComp": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "PuntoEntradaOpComp": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TarifaOperadorComp": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoPersonasEntradaComp": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoPersonasJuntasComp": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoPosicionPaseValidado": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "IdOperadorServicioPase": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraEntradaOpPase": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "PuntoEntradaOpPase": "00000000000000",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "TipoValidacionPase": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "NoViajesAcumuladosPase": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraInicioActT1": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFinActT1": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SaldoLimiteViajesT1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SaldoLimiteViajesDiaT1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraLimiteDiaT1": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SaldoBonoT1": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraInicioActT2": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFinActT2": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SaldoLimiteViajesT2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SaldoLimiteViajesDiaT2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraLimiteDiaT2": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SaldoBonoT2": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraInicioActT3": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraFinActT3": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SaldoLimiteViajesT3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SaldoLimiteViajesDiaT3": 0,
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "FechaHoraLimiteDiaT3": "00/00/1990T00:00:00",
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:         "SaldoBonoT3": 0
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->:     }
+05-11 12:29:33.569 24781 24781 I Log[NFC-AtuLima]->: } 
+05-11 12:29:37.022 24781 24781 I Log[NFC-AtuLima]->: ========VALIDATION CARD==== 
+05-11 12:29:37.025 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 905a000003f2106000 
+05-11 12:29:37.027 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 9100 
+05-11 12:29:37.028 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 9060000000 
+05-11 12:29:37.030 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 0401013300160591af 
+05-11 12:29:37.030 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:37.032 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 0401010300160591af 
+05-11 12:29:37.033 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:37.035 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 042f76ca8e2390214335303045259100 
+05-11 12:29:37.035 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90aa0000010700 
+05-11 12:29:37.038 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 14850f945b9cc1b244017de0b541372491af 
+05-11 12:29:37.039 24781 24781 I Log[NFC-AtuLima]->: samExchange tx => 800a110022090014850f945b9cc1b244017de0b5413724042f76ca8e239000fbd0893571dc6fff00 
+05-11 12:29:37.048 24781 24781 I Log[NFC-AtuLima]->: samExchange rx <= 545f0d1020c1883cfec2afda852ba2482c8dc671db5ad7c345c32139c1cd3fe390af 
+05-11 12:29:37.049 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000020545f0d1020c1883cfec2afda852ba2482c8dc671db5ad7c345c32139c1cd3fe300 
+05-11 12:29:37.053 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 30a8d5a64a91a7aff62ed14d14c199269100 
+05-11 12:29:37.054 24781 24781 I Log[NFC-AtuLima]->: samExchange tx => 800a00001030a8d5a64a91a7aff62ed14d14c19926 
+05-11 12:29:37.058 24781 24781 I Log[NFC-AtuLima]->: samExchange rx <= 9000 
+05-11 12:29:37.058 24781 24781 I Log[NFC-AtuLima]->: samExchange tx => 80d5000000 
+05-11 12:29:37.062 24781 24781 I Log[NFC-AtuLima]->: samExchange rx <= b9a1b3bf7d4e4db35412e6c6f14dc5479000 
+05-11 12:29:37.062 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd0000070000000020000000 
+05-11 12:29:37.067 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 4fb2d6c1ffa62369bd983d00613edd642e6ac7319a9a56d53452f5362e1c1bfa6f348c61eed43477f332a96c6161ef809100 
+05-11 12:29:37.068 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd000007010000002f000000 
+05-11 12:29:37.073 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= f834121b48299b92c6e20a6e89483912b8d5f7f3aa3c3aeae09475b6a6898f0acbe6f6d4f79bf0809634c1cd42d79fa291af 
+05-11 12:29:37.074 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:37.076 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 3d718b157ec8ad317c239178229116e29100 
+05-11 12:29:37.077 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd0000070200000031000000 
+05-11 12:29:37.082 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 14d4f1cbca3a23968bd0631c2402ce3fe586b4c8693783e0103ef37883adceb2b19b67793316ca94eb0ecdf4f925ba8391af 
+05-11 12:29:37.083 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:37.085 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= c8ddd29e3643e73a8e8ea3b297e4d45c9100 
+05-11 12:29:37.086 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90bd00000709000000c6000000 
+05-11 12:29:37.092 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= bc2742f01e8bc23b5ccaa25e6cb36a83a68ab12cf0018db97b012e72b50c5ffa92a079f4d524739d2288ed6aded75e9a91af 
+05-11 12:29:37.092 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:37.097 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= d9c88459874dbef5669e44da85954e794d6b9ade7cebaca843d0c21b650cafa26c557745e959dc8f1bc540efe7592dc791af 
+05-11 12:29:37.097 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:37.101 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 46c32087c193541bdc510af9c7875999d987a79e5c9b01f85f442388f9c7ec77c2c1ed6be92acaea2305e99e4f8f180e91af 
+05-11 12:29:37.102 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:37.105 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 0406749168baf90b3954ee3fbd8a04bb91c2221906be986eef92815bd1763088be0ef591be14f6fc0d1b17f2450721e891af 
+05-11 12:29:37.106 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 90af000000 
+05-11 12:29:37.108 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= efabbc8a2d6a1fd90770920ed8fc2e769100 
+05-11 12:29:37.109 24781 24781 I Log[NFC-AtuLima]->: piccExchange => 906c0000010700 
+05-11 12:29:37.112 24781 24781 I Log[NFC-AtuLima]->: piccExchange rx <= 2eb2486cbb861bb96bca483d462b361d9100 
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: validate_card result : 
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->:  10 
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: outputData : 
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->:  <?xml version="1.0" encoding="UTF-8"?>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: <TransaccionPenalizacion xsi:noNamespaceSchemaLocation="TransaccionPenalizacion.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<IdTransaccion>000000000400500000000</IdTransaccion>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<IdTarjetaTIT>0000000004005</IdTarjetaTIT>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<UidTarjeta>042F76CA8E2390</UidTarjeta>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<EstadoTIT>0</EstadoTIT>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<IdPerfil1>0</IdPerfil1>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<IdPerfil2>0</IdPerfil2>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<IdPerfil3>0</IdPerfil3>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<IdTitulo1>0</IdTitulo1>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<EstadoTitulo1>0</EstadoTitulo1>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<EstadoTitulo2>0</EstadoTitulo2>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<EstadoTitulo3>0</EstadoTitulo3>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<NoTransaccionTIT>0</NoTransaccionTIT>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<NoAccionTIT>0</NoAccionTIT>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<NoAccionGrupoTIT>0</NoAccionGrupoTIT>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<SaldoMonedero>0</SaldoMonedero>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<UidSamEquipoCampo>04010103022801</UidSamEquipoCampo>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<NoEtapaTransbordo>0</NoEtapaTransbordo>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<NoPersonasDchoTransbordo>0</NoPersonasDchoTransbordo>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<NoPersonasJuntasEtapa>0</NoPersonasJuntasEtapa>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<IdOperadorServicioAnt>0</IdOperadorServicioAnt>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<PuntoEntradaOpAnt>0</PuntoEntradaOpAnt>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<NoZonasOperadorAnterior>0</NoZonasOperadorAnterior>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<TarifaOperadorAnt>0</TarifaOperadorAnt>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<IdOperadorServicio>0</IdOperadorServicio>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<FechaHoraEntradaOp>1990-00-00T00:00:00</FechaHoraEntradaOp>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<PuntoEntradaOp>0</PuntoEntradaOp>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<TarifaNominal>0</TarifaNominal>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<TarifaCalculada>0</TarifaCalculada>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 	<CRC>A53FC72F80E92A8E8F56331D6D2351B1</CRC>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: </TransaccionPenalizacion>
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->: 
+05-11 12:29:37.135 24781 24781 I Log[NFC-AtuLima]->:  
+05-11 12:29:37.137 24781 24781 I Log[NFC-AtuLima]->: message : 
+05-11 12:29:37.137 24781 24781 I Log[NFC-AtuLima]->:  {"acousticSignal":"","msgDisplay":"","visualSignal":""} 
