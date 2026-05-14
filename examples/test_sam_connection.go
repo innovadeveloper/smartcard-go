@@ -63,6 +63,13 @@ func main() {
 		
 		log.Printf("Successfully connected to SAM on reader %d!", i)
 		
+		// Authenticate SAM host
+		err = authenticateSam(sam)
+		if err != nil {
+			log.Printf("Failed to authenticate SAM: %v", err)
+			continue
+		}
+
 		// Get SAM version
 		version, err := sam.GetVersion()
 		if err != nil {
@@ -83,22 +90,22 @@ func main() {
 			log.Printf("  Protocol: %02X", version[6])
 		}
 		
-		// Authenticate SAM host
-		err = authenticateSam(sam)
-		if err != nil {
-			log.Printf("Failed to authenticate SAM: %v", err)
-			continue
-		}
 		
 		// Check available keys in SAM
-		log.Println("Checking available keys in SAM...")
-		for keyNo := 0; keyNo < 20; keyNo++ {
-			keyInfo, err := sam.SAMGetKeyEntry(keyNo)
-			if err == nil {
-				log.Printf("Key %d exists: % X", keyNo, keyInfo)
-			}
-		}
-		
+		// log.Println("Checking available keys in SAM...")
+		// for keyNo := 0; keyNo < 20; keyNo++ {
+		// 	keyInfo, err := sam.SAMGetKeyEntry(keyNo)
+		// 	if err == nil {
+		// 		log.Printf("Key %d exists: % X", keyNo, keyInfo)
+		// 	}
+		// }
+
+		// log.Println("Preparing SAM key for PICC operations...")
+		// _, err2 := sam.SAMGetKeyEntry(9)
+		// if err2 != nil {
+		// 	log.Printf("Warning: Could not prepare key 9: %v", err2)
+		// }
+
 		// Now authenticate PICC using SAM crypto engine
 		err = authenticatePiccWithSam(sam)
 		if err != nil {
@@ -225,7 +232,9 @@ func authenticatePiccWithSam(sam samav2.SamAv2) error {
 	authMode := 0x11
 	
 	// Try different key numbers - first try 0x00 (default), then others
-	keyNumbers := []int{0x00, 0x07, 0x09, 0x01, 0x02, 0x03}
+	// keyNumbers := []int{0x00, 0x07, 0x09, 0x01, 0x02, 0x03}
+	keyNumbers := []int{0x09}
+	// keyNumbers := []int{0x07}
 	var samResponse []byte
 	var successKeyNo int = -1
 	
