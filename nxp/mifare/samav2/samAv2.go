@@ -37,6 +37,8 @@ type SamAv2 interface {
 	LockUnlock(key, maxchainBlocks []byte, keyNr, keyVr, unlockKeyNo, unlockKeyVer, p1 int) ([]byte, error)
 	SwitchToAV2(key []byte, keyNr, keyVr int) ([]byte, error)
 	AuthHostAV1(block cipher.Block, keyNo, keyVer, authMode int) ([]byte, error)
+	AuthenticatePICC_Part1(authMode, keyNo, keyVer int, encRndB, divInput []byte) ([]byte, error)
+	AuthenticatePICC_Part2(encRndA []byte) ([]byte, error)
 	ChangeKeyEntryAv1(keyNbr, proMax int,
 		keyVA, keyVB, keyVC []byte,
 		dfKeyNr, ceKNo, ceKV, kuc, verA, verB, verC byte,
@@ -735,4 +737,49 @@ func (sam *samAv2) DumpSecretKey(keyNo, keyVer int, divInput []byte) ([]byte, er
 // ApduSamKillAuthPICC SAM_KillAuthentication invalidates any kind authentication PICC
 func ApduSamKillAuthPICC() []byte {
 	return []byte{0x80, 0xCA, 0x01, 0x00}
+}
+
+// ApduAuthenticatePICC_Part1 SAM_AuthenticatePICC Part1 command for DESFire authentication
+func ApduAuthenticatePICC_Part1(authMode, keyNo, keyVer int, encRndB, divInput []byte) []byte {
+	// Structure based on C++ code
+	cmd := []byte{0x80, 0x0A, byte(authMode), 0x00, 0x00} // CLA INS P1 P2 LC
+	
+	// Calculate length: MIN_DATA_LENGTH (2) + encRndBLength + divInputLength
+	minDataLength := 2 // keyNo + keyVer
+	totalLength := minDataLength + len(encRndB)
+	if (authMode & 0x01) != 0 && len(divInput) > 0 {
+		totalLength += len(divInput)
+	}
+	cmd[4] = byte(totalLength)
+	
+	// Add data: keyNo + keyVer + encRndB + [divInput if authMode & 0x01]
+	cmd = append(cmd, byte(keyNo))
+	cmd = append(cmd, byte(keyVer))
+	cmd = append(cmd, encRndB...)
+	
+	// Add divInput only if authMode & 0x01 and divInput is present
+	if (authMode & 0x01) != 0 && len(divInput) > 0 {
+		cmd = append(cmd, divInput...)
+	}
+	
+	cmd = append(cmd, 0x00) // Le
+	return cmd
+}
+
+// ApduAuthenticatePICC_Part2 SAM_AuthenticatePICC Part2 command  
+func ApduAuthenticatePICC_Part2(encRndA []byte) []byte {
+	// Structure based on C++ code
+	cmd := []byte{0x80, 0x0A, 0x00, 0x00, byte(len(encRndA))} // CLA INS P1 P2 LC
+	cmd = append(cmd, encRndA...)
+	return cmd
+}
+
+// AuthenticatePICC_Part1 SAM_AuthenticatePICC Part1 for DESFire authentication
+func (sam *samAv2) AuthenticatePICC_Part1(authMode, keyNo, keyVer int, encRndB, divInput []byte) ([]byte, error) {
+	return sam.Apdu(ApduAuthenticatePICC_Part1(authMode, keyNo, keyVer, encRndB, divInput))
+}
+
+// AuthenticatePICC_Part2 SAM_AuthenticatePICC Part2 for DESFire authentication
+func (sam *samAv2) AuthenticatePICC_Part2(encRndA []byte) ([]byte, error) {
+	return sam.Apdu(ApduAuthenticatePICC_Part2(encRndA))
 }
