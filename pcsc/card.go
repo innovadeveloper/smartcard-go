@@ -2,6 +2,7 @@ package pcsc
 
 import (
 	//"fmt"
+	"log"
 
 	"context"
 	"errors"
@@ -113,6 +114,7 @@ func (c *Scard) DisconnectEjectCard() error {
 
 // Apdu Primitive function (SCardTransmit) to send command to card
 func (c *Scard) Apdu(apdu []byte) ([]byte, error) {
+	// log.Printf("Apdu called in card.go low level")
 	if c.State != CONNECTED {
 		return nil, fmt.Errorf("don't Connect to Card, %w", smartcard.ErrComm)
 	}

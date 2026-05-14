@@ -123,6 +123,7 @@ func SamAV2(c smartcard.ICard) SamAv2 {
 
 // ApduGetVersion SAM_GetVersion
 func ApduGetVersion() []byte {
+	// log.Printf("Apdu Get Version called")
 	return []byte{0x80, 0x60, 0x00, 0x00, 0x00}
 }
 func (sam *samAv2) GetVersion() ([]byte, error) {
