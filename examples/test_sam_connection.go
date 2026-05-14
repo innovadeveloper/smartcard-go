@@ -28,7 +28,7 @@ func main() {
 		log.Printf("  [%d]: %s", i, reader)
 	}
 	
-	log.Printf("sample 3")
+	// log.Printf("sample 3")
 	// Find SAM readers (looking for ACR1581U SAM slots)
 	samReaders := make([]pcsc.Reader, 0)
 	for _, readerName := range readers {

@@ -2,7 +2,7 @@ package pcsc
 
 import (
 	//"fmt"
-	"log"
+	// "log"
 
 	"context"
 	"errors"
