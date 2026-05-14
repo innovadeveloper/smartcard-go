@@ -82,9 +82,39 @@ func main() {
 			log.Printf("  Protocol: %02X", version[6])
 		}
 		
-		log.Println("SAM connection and version reading successful!")
+		// Authenticate SAM host
+		err = authenticateSam(sam)
+		if err != nil {
+			log.Printf("Failed to authenticate SAM: %v", err)
+			continue
+		}
+		
+		log.Println("SAM connection, version reading, and authentication successful!")
 		return
 	}
 	
 	log.Println("Failed to connect to any SAM device")
+}
+
+func authenticateSam(sam samav2.SamAv2) error {
+	// SAM authentication parameters
+	authKey := []byte{
+		0xDB, 0x2E, 0x9E, 0x71,
+		0x6C, 0x61, 0xA7, 0xCA,
+		0xF9, 0x60, 0x55, 0x35,
+		0xFB, 0xF0, 0x25, 0x34,
+	}
+	keyNo := byte(100)
+	keyVer := byte(0)
+	
+	log.Printf("Authenticating SAM with key number %d, key version %d, authKey [% X...]", keyNo, keyVer, authKey[0:8])
+	
+	// Perform host authentication (AV2 mode with hostMode 2 = Full)
+	_, err := sam.AuthHostAV2(authKey, int(keyNo), int(keyVer), 2)
+	if err != nil {
+		return err
+	}
+	
+	log.Println("SAM host authentication successful!")
+	return nil
 }
