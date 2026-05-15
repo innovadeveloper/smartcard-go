@@ -1,6 +1,7 @@
 package main
 
 import (
+	// "time"
 	"fmt"
 	"log"
 	"strings"
@@ -63,50 +64,27 @@ func main() {
 		
 		log.Printf("Successfully connected to SAM on reader %d!", i)
 		
-		// Authenticate SAM host
+		// Step 1: Authenticate SAM host
+		log.Println("\n[STEP-001] Authenticate SAM host")
 		err = authenticateSam(sam)
 		if err != nil {
 			log.Printf("Failed to authenticate SAM: %v", err)
 			continue
 		}
+		log.Println("✅ SAM host authentication successful")
+		
+		// time.Sleep(1000 * time.Millisecond) // o 100ms si quieres ser seguro
 
-		// Get SAM version
-		version, err := sam.GetVersion()
-		if err != nil {
-			log.Printf("Failed to get SAM version: %v", err)
-			continue
-		}
+		// Step 2: Get SAM version
+		log.Println("\n[STEP-002] Get Version of SAM")
+		safeGetSAMVersion(sam)
 		
-		log.Printf("SAM Version: % X", version)
-		
-		// Parse version information if possible
-		if len(version) >= 7 {
-			log.Printf("  Vendor ID: %02X", version[0])
-			log.Printf("  Type: %02X", version[1]) 
-			log.Printf("  Subtype: %02X", version[2])
-			log.Printf("  Major Version: %02X", version[3])
-			log.Printf("  Minor Version: %02X", version[4])
-			log.Printf("  Storage Size: %02X", version[5])
-			log.Printf("  Protocol: %02X", version[6])
-		}
-		
-		
-		// Check available keys in SAM
-		// log.Println("Checking available keys in SAM...")
-		// for keyNo := 0; keyNo < 20; keyNo++ {
-		// 	keyInfo, err := sam.SAMGetKeyEntry(keyNo)
-		// 	if err == nil {
-		// 		log.Printf("Key %d exists: % X", keyNo, keyInfo)
-		// 	}
-		// }
+		// Step 3: Prepare SAM keys (optional - for key discovery)
+		// log.Println("\n[STEP-003] Preparing SAM keys for PICC operations...")
+		// printAvailableKeys(sam)
 
-		// log.Println("Preparing SAM key for PICC operations...")
-		// _, err2 := sam.SAMGetKeyEntry(9)
-		// if err2 != nil {
-		// 	log.Printf("Warning: Could not prepare key 9: %v", err2)
-		// }
-
-		// Now authenticate PICC using SAM crypto engine
+		// Step 4: Authenticate PICC using SAM crypto engine
+		log.Println("\n[STEP-004] Authenticate PICC")
 		err = authenticatePiccWithSam(sam)
 		if err != nil {
 			log.Printf("Failed to authenticate PICC with SAM: %v", err)
@@ -120,7 +98,61 @@ func main() {
 	log.Println("Failed to connect to any SAM device")
 }
 
+/**
+* Run get version command two times if is necessary to initialize the sam after host authentication
+**/
+func safeGetSAMVersion(sam samav2.SamAv2) error {
+	version, err := sam.GetVersion()
+	if err != nil {
+		log.Printf("Failed to get SAM version (first attempt): %v", err)
+		return err
+	}
+
+	// Caso típico post-host-auth
+	if len(version) == 2 && version[0] == 0x6A && version[1] == 0x84 {
+		log.Println("SAM returned 6A84 (not ready), retrying GetVersion...")
+		version, err = sam.GetVersion()
+		if err != nil {
+			log.Printf("Failed to get SAM version (retry): %v", err)
+			return err
+		}
+	}
+
+	log.Printf("SAM Version: % X", version)
+
+	// Parse seguro
+	if len(version) >= 7 {
+		log.Printf("  Vendor ID: %02X", version[0])
+		log.Printf("  Type: %02X", version[1])
+		log.Printf("  Subtype: %02X", version[2])
+		log.Printf("  Major Version: %02X", version[3])
+		log.Printf("  Minor Version: %02X", version[4])
+		log.Printf("  Storage Size: %02X", version[5])
+		log.Printf("  Protocol: %02X", version[6])
+	}
+
+	return nil
+}
+
+func printAvailableKeys(sam samav2.SamAv2) error {
+	for keyNo := 0; keyNo < 20; keyNo++ {
+		keyInfo, err := sam.SAMGetKeyEntry(keyNo)
+		if err != nil {
+			continue
+		}
+
+		log.Printf("Key %d available: % X", keyNo, keyInfo)
+	}
+	// keyInfo, err := sam.SAMGetKeyEntry(9)
+	// if err == nil {
+	// 	log.Printf("Key %d available: % X", 9, keyInfo)
+	// }
+	return nil
+}
+
 func authenticateSam(sam samav2.SamAv2) error {
+
+
 	// SAM authentication parameters
 	authKey := []byte{
 		0xDB, 0x2E, 0x9E, 0x71,
@@ -228,6 +260,7 @@ func authenticatePiccWithSam(sam samav2.SamAv2) error {
 	// SAM AUTH PICC Part 1 - Based on logs structure  
 	// divInput from logs: 042f76ca8e239000fbd0893571dc6fff (16 bytes exactly)
 	divInput := []byte{0x04, 0x2F, 0x76, 0xCA, 0x8E, 0x23, 0x90, 0x00, 0xFB, 0xD0, 0x89, 0x35, 0x71, 0xDC, 0x6F, 0xFF}
+	// divInput := []byte{0x04, 0x2F, 0x76, 0xCA, 0x8E, 0x23, 0x90, 0x00, 0xFB, 0xD0, 0x89, 0x50, 0x50, 0xDC, 0x6F, 0xFF}
 
 	authMode := 0x11
 	
