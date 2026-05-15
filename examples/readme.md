@@ -1,4 +1,4 @@
-> idnciame los pasos de como compilar y probar ese script de go creado.. y como implementa la librería
+>  pasos de como compilar y probar ese script de go creado
 
 ⏺ Pasos para compilar y probar el script
 
@@ -79,3 +79,34 @@
   5. Resultado → Información del SAM AV2 mostrada
 
   El código implementa el patrón estándar de la librería: contexto → reader → conexión específica → operaciones.
+
+
+---
+
+### FILE go.mod
+```
+module sam_test
+
+go 1.26.3
+
+require smart_project v0.0.0
+
+require (
+	github.com/aead/cmac v0.0.0-20160719120800-7af84192f0b1 // indirect
+	github.com/dumacp/smartcard v0.1.8 // indirect
+	github.com/ebfe/scard v0.0.0-20241214075232-7af069cabc25 // indirect
+)
+
+replace smart_project => ../
+```
+
+
+### FILE go.sum
+```
+github.com/aead/cmac v0.0.0-20160719120800-7af84192f0b1 h1:+JkXLHME8vLJafGhOH4aoV2Iu8bR55nU6iKMVfYVLjY=
+github.com/aead/cmac v0.0.0-20160719120800-7af84192f0b1/go.mod h1:nuudZmJhzWtx2212z+pkuy7B6nkBqa+xwNXZHL1j8cg=
+github.com/dumacp/smartcard v0.1.8 h1:HKqrKrWJiBK3Sto4cymmv4VMkzcT3cHlRCc9A4XeWyg=
+github.com/dumacp/smartcard v0.1.8/go.mod h1:qLQLuYHKbY97/VydBGf/JfGkgHw9OgRdOppcd5J7UGw=
+github.com/ebfe/scard v0.0.0-20241214075232-7af069cabc25 h1:vXmXuiy1tgifTqWAAaU+ESu1goRp4B3fdhemWMMrS4g=
+github.com/ebfe/scard v0.0.0-20241214075232-7af069cabc25/go.mod h1:BkYEeWL6FbT4Ek+TcOBnPzEKnL7kOq2g19tTQXkorHY=
+```

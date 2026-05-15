@@ -1,0 +1,122 @@
+uid : 042f76ca8e2390
+00fbd0893571dc6fff
+uid : 04422112606f80
+00fbbddeed9f907fff
+uid : 045d72ca8e2390
+00fba28d3571dc6fff
+uid : 04ab57ca8e2390
+00fb54a83571dc6fff
+
+
+
+========READ FULL CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 042f76ca8e2390214335303045259100 
+
+piccExchange => 90aa0000010700 
+piccExchange rx <= a30f0623e0b7901a70c3f10593028e9391af 
+
+samExchange tx => 800a1100220900a30f0623e0b7901a70c3f10593028e93042f76ca8e239000fbd0893571dc6fff00 
+samExchange rx <= c130a9667e731ef501629f73d0bb6936895c688659255bdf60a473a47f5996e090af 
+
+piccExchange => 90af000020c130a9667e731ef501629f73d0bb6936895c688659255bdf60a473a47f5996e000 
+piccExchange rx <= 8ddaebd7485d3c9f873343735a33aa7f9100 
+
+samExchange tx => 800a0000108ddaebd7485d3c9f873343735a33aa7f 
+samExchange rx <= 9000 
+
+
+========READ FULL CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401010100180591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010104180591af 
+piccExchange => 90af000000 
+piccExchange rx <= 04422112606f80b90c224d6036229100 
+
+piccExchange => 90aa0000010700 
+piccExchange rx <= 2677c3ac06a6e00aa38b4584f2f10e7e91af 
+
+samExchange tx => 800a11002209002677c3ac06a6e00aa38b4584f2f10e7e04422112606f8000fbbddeed9f907fff00 
+samExchange rx <= 3b84fc509493b5fce3b4b552ec1f7230eaad391f4ce3ba51285a2e572f3f2afd90af 
+
+piccExchange => 90af0000203b84fc509493b5fce3b4b552ec1f7230eaad391f4ce3ba51285a2e572f3f2afd00 
+piccExchange rx <= e4f05395a9f1b404400171999e28084e9100 
+samExchange tx => 800a000010e4f05395a9f1b404400171999e28084e 
+samExchange rx <= 9000 
+
+
+========READ FULL CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401010100180591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010104180591af 
+piccExchange => 90af000000 
+piccExchange rx <= 04422112606f80b90c224d6036229100 
+
+piccExchange => 90aa0000010700 
+piccExchange rx <= 2677c3ac06a6e00aa38b4584f2f10e7e91af 
+
+samExchange tx => 800a11002209002677c3ac06a6e00aa38b4584f2f10e7e04422112606f8000fbbddeed9f907fff00 
+samExchange rx <= 3b84fc509493b5fce3b4b552ec1f7230eaad391f4ce3ba51285a2e572f3f2afd90af 
+
+piccExchange => 90af0000203b84fc509493b5fce3b4b552ec1f7230eaad391f4ce3ba51285a2e572f3f2afd00 
+piccExchange rx <= e4f05395a9f1b404400171999e28084e9100 
+samExchange tx => 800a000010e4f05395a9f1b404400171999e28084e 
+samExchange rx <= 9000 
+
+========READ FULL CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 045d72ca8e2390214335303045259100 
+
+piccExchange => 90aa0000010700 
+piccExchange rx <= 758eaa06e6d08bc9c5717f505bba3cb991af 
+
+samExchange tx => 800a1100220900758eaa06e6d08bc9c5717f505bba3cb9045d72ca8e239000fba28d3571dc6fff00 
+samExchange rx <= 0a2e2f659ade5416b1f621d2275f43bfcb34651e8b3703f438b4b349699323c690af 
+
+piccExchange => 90af0000200a2e2f659ade5416b1f621d2275f43bfcb34651e8b3703f438b4b349699323c600 
+piccExchange rx <= 808ba0f232a30623172bfd9e7b50fc609100 
+samExchange tx => 800a000010808ba0f232a30623172bfd9e7b50fc60 
+samExchange rx <= 9000 
+
+
+========READ FULL CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 04ab57ca8e2390214335303045259100 
+
+piccExchange => 90aa0000010700 
+piccExchange rx <= ad7f6c226334e3f318c916974afd0b4b91af 
+
+samExchange tx => 800a1100220900ad7f6c226334e3f318c916974afd0b4b04ab57ca8e239000fb54a83571dc6fff00 
+samExchange rx <= 537a9a5d12e6f49021c58e0f0ffdc881df39f03bec1cf75e7e532a2cf23c234290af 
+
+
+piccExchange => 90af000020537a9a5d12e6f49021c58e0f0ffdc881df39f03bec1cf75e7e532a2cf23c234200 
+piccExchange rx <= 0f753ce5c3721df8b180c731ad52df8b9100 
+samExchange tx => 800a0000100f753ce5c3721df8b180c731ad52df8b 
+samExchange rx <= 9000 
+samExchange tx => 80d5000000 
+samExchange rx <= 86bddb411e8a005e2629f5067faf38799000 

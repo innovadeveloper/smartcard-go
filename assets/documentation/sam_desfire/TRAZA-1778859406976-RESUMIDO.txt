@@ -1,0 +1,2253 @@
+
+[STEP-004] Authenticate PICC
+2026/05/15 10:32:48 Found PICC reader: ACS ACR1581 1S Dual Reader(1)
+2026/05/15 10:32:48 Connected to PICC successfully
+2026/05/15 10:32:48 TX => [90 5A 00 00 03 F2 10 60 00]
+2026/05/15 10:32:48 	RX => [91 00]
+2026/05/15 10:32:48 PICC SELECT AID response: 91 00
+2026/05/15 10:32:48 TX => [90 60 00 00 00]
+2026/05/15 10:32:48 	RX => [04 01 01 33 00 16 05 91 AF]
+2026/05/15 10:32:48 PICC GET VERSION response: 04 01 01 33 00 16 05 91 AF
+2026/05/15 10:32:48 TX => [90 AF 00 00 00]
+2026/05/15 10:32:48 	RX => [04 01 01 03 00 16 05 91 AF]
+2026/05/15 10:32:48 PICC VERSION continue: 04 01 01 03 00 16 05 91 AF
+2026/05/15 10:32:48 TX => [90 AF 00 00 00]
+2026/05/15 10:32:48 	RX => [04 2F 76 CA 8E 23 90 21 43 35 30 30 45 25 91 00]
+2026/05/15 10:32:48 PICC VERSION continue: 04 2F 76 CA 8E 23 90 21 43 35 30 30 45 25 91 00
+2026/05/15 10:32:48 TX => [90 AA 00 00 01 07 00]
+2026/05/15 10:32:48 	RX => [D5 0D D3 0E 1E 83 CE 35 D0 2D C1 C2 AD 4F 70 2B 91 AF]
+2026/05/15 10:32:48 PICC AUTH AES response: D5 0D D3 0E 1E 83 CE 35 D0 2D C1 C2 AD 4F 70 2B 91 AF
+
+2026/05/15 10:32:48 Trying SAM AuthenticatePICC with keyNo=9...
+
+# CLA -> 80
+# INS -> 0A
+# PICC UUID -> 04 2F 76 CA 8E 23 90
+# DIV INPUT -> 00 FB D0 89 35 71 DC 6F FF
+
+2026/05/15 10:32:48 TX => [80 0A 11 00 22 09 00 D5 0D D3 0E 1E 83 CE 35 D0 2D C1 C2 AD 4F 70 2B 04 2F 76 CA 8E 23 90 00 FB D0 89 35 71 DC 6F FF 00]
+2026/05/15 10:32:48 	RX => [11 75 DE 04 88 41 3C 05 A7 51 70 C7 E4 D4 68 4D 25 9E C1 4E F9 3A C5 79 2E B2 40 18 80 3F 49 AA 90 AF]
+
+
+
+2026/05/15 10:32:48 KeyNo 9 response status: 90 AF
+2026/05/15 10:32:48 SUCCESS! KeyNo 9 works
+2026/05/15 10:32:48 Using keyNo=9 for PICC authentication
+2026/05/15 10:32:48 SAM AUTH PICC Part 1 response: 11 75 DE 04 88 41 3C 05 A7 51 70 C7 E4 D4 68 4D 25 9E C1 4E F9 3A C5 79 2E B2 40 18 80 3F 49 AA 90 AF
+2026/05/15 10:32:48 TX => [90 AF 00 00 20 11 75 DE 04 88 41 3C 05 A7 51 70 C7 E4 D4 68 4D 25 9E C1 4E F9 3A C5 79 2E B2 40 18 80 3F 49 AA 00]
+2026/05/15 10:32:48 	RX => [77 E6 BD C6 62 14 38 5E 64 AE 2A BD 4C 8F 76 DE 91 00]
+2026/05/15 10:32:48 PICC AUTH continue response: 77 E6 BD C6 62 14 38 5E 64 AE 2A BD 4C 8F 76 DE 91 00
+2026/05/15 10:32:48 TX => [80 0A 00 00 10 77 E6 BD C6 62 14 38 5E 64 AE 2A BD 4C 8F 76 DE]
+2026/05/15 10:32:48 	RX => [90 00]
+2026/05/15 10:32:48 SAM AUTH PICC Part 2 response: 90 00
+2026/05/15 10:32:48 TX => [80 D5 00 00 00]
+2026/05/15 10:32:48 	RX => [4F F8 2F D1 41 C9 44 1D 10 6B D7 EF 5B FE 0F 5A 90 00]
+2026/05/15 10:32:48 Session Key: 4F F8 2F D1 41 C9 44 1D 10 6B D7 EF 5B FE 0F 5A 90 00
+2026/05/15 10:32:48 PICC authentication with SAM completed successfully!
+2026/05/15 10:32:48 SAM connection, authentication, and PICC authentication successful!
+
+
+-----------------------
+
+
+### Caso 1
+00fbd0893571dc6fff
+### Caso 2
+00fbbddeed9f907fff
+### Caso 3
+00fba28d3571dc6fff
+### Caso 4
+00fb54a83571dc6fff
+
+
+########################################################################################################################################################################
+
+
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 042f76ca8e2390214335303045259100 
+piccExchange => 90aa0000010700 
+piccExchange rx <= a30f0623e0b7901a70c3f10593028e9391af 
+
+samExchange tx => 800a1100220900 a30f0623e0b7901a70c3f10593028e93 042f76ca8e2390 00fbd0893571dc6fff 00 
+samExchange rx <= c130a9667e731ef501629f73d0bb6936895c688659255bdf60a473a47f5996e090af 
+
+----
+
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401010100180591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010104180591af 
+piccExchange => 90af000000 
+piccExchange rx <= 04422112606f80b90c224d6036229100 
+
+piccExchange => 90aa0000010700 
+piccExchange rx <= 2677c3ac06a6e00aa38b4584f2f10e7e91af 
+
+samExchange tx => 800a11002209002677c3ac06a6e00aa38b4584f2f10e7e04422112606f8000fbbddeed9f907fff00 
+samExchange rx <= 3b84fc509493b5fce3b4b552ec1f7230eaad391f4ce3ba51285a2e572f3f2afd90af 
+
+
+----
+
+
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 045d72ca8e2390214335303045259100 
+
+piccExchange => 90aa0000010700 
+piccExchange rx <= 758eaa06e6d08bc9c5717f505bba3cb991af 
+
+samExchange tx => 800a1100220900 758eaa06e6d08bc9c5717f505bba3cb9 045d72ca8e239000fba28d3571dc6fff00 
+samExchange rx <= 0a2e2f659ade5416b1f621d2275f43bfcb34651e8b3703f438b4b349699323c690af 
+
+
+----
+
+
+
+
+
+
+
+########################################################################################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+========Load xml and initialize sam==== 
+samExchange tx => 80a400000364000000 
+samExchange rx <= 7ecbb92d33083c553811f53c90af 
+samExchange tx => 80a4000014843a660645b060fb67cd8acf47e7021b83d843c300 
+samExchange rx <= 7a8cf32016667fdca0e22a7683ed8792286b9d1745a7559190af 
+samExchange tx => 80a4000020a9007da7635a0ebb55fd84236dd0924c877312f2c6453eaa33f6656990dc622700 
+samExchange rx <= 6c381a38102e21dd75d52b32b0fc92c89000 
+samExchange tx => 8060000000 
+samExchange rx <= 0401010302280104010103022801043430fa8e7080201723000008091500a29000 
+========READ FULL CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 042f76ca8e2390214335303045259100 
+
+piccExchange => 90aa0000010700 
+# enc randb from picc
+piccExchange rx <= a30f0623e0b7901a70c3f10593028e9391af 
+# div input : 00fbd0893571dc6fff
+# enc rand b from picc : a30f0623e0b7901a70c3f10593028e93
+# uid : 042f76ca8e2390
+samExchange tx => 800a1100220900 a30f0623e0b7901a70c3f10593028e93 042f76ca8e2390 00fbd0893571dc6fff00 
+samExchange rx <= c130a9667e731ef501629f73d0bb6936895c688659255bdf60a473a47f5996e090af 
+
+piccExchange => 90af000020c130a9667e731ef501629f73d0bb6936895c688659255bdf60a473a47f5996e000 
+piccExchange rx <= 8ddaebd7485d3c9f873343735a33aa7f9100 
+
+samExchange tx => 800a0000108ddaebd7485d3c9f873343735a33aa7f 
+samExchange rx <= 9000 
+samExchange tx => 80d5000000 
+samExchange rx <= 9e428f71b1287d21143a55ec89b1dc109000 
+piccExchange => 90bd0000070000000020000000 
+piccExchange rx <= 9863b887cd33bf602bd0685b3b7c32cde6739d6b864f9efe8a00420c2cf628dc9fc594636efeb845f26699ec621329c79100 
+piccExchange => 90bd000007010000002f000000 
+piccExchange rx <= bd16d80070cdfe1187e986afb1dcaa583901677066dd7c7fa2bc262b7bd30f676f00911d4f5305e1f70ab8a0536bc82e91af 
+piccExchange => 90af000000 
+piccExchange rx <= a85d52109caf6903edf07ce5d018b9249100 
+piccExchange => 90bd0000070200000031000000 
+piccExchange rx <= e54644847058250866a821c3c15539e839767061588e64badd55091e5e0014ba0e704bd29e2737d4445e93c5369abf7791af 
+piccExchange => 90af000000 
+piccExchange rx <= 0227b50a953cf97fb96769cd1304f2f69100 
+piccExchange => 90bd000007030000004e000000 
+piccExchange rx <= d7bf2a867a5aa011d7fd19797e04c0837a4b3f682aeee97de6f29ac9fb619f3b098fa4325601b6c9e3195b4974a6d7f891af 
+piccExchange => 90af000000 
+piccExchange rx <= 7ef7a49a9490f11dbdc0cf8b1c56db6645fdfa4155c2f253913cceb34adc7fb58b0c4551a43b3b999d169b3ca4c76ecd9100 
+piccExchange => 90bd000007040000004e000000 
+piccExchange rx <= 6a6a13383717780e521d2900189e02279fbbafc8cf345e0caecc7205b2d3cd327f43dffc7607e33348bf90baa6f36c1d91af 
+piccExchange => 90af000000 
+piccExchange rx <= c1b3b5d86fafa9e2119ff29ecd0f2861f9d19ee0cecdccfeeb771d289cb925211bdd0bc01ca8e6fcdf300b3ffca53fa89100 
+piccExchange => 90bd000007050000004e000000 
+piccExchange rx <= 237c25692bda81db9dd126463fd98075615c0673adcdf73fdbc5f4394d24266d9d6906ac8b2328a10d6ea54603a3cd1391af 
+piccExchange => 90af000000 
+piccExchange rx <= b3bf1aea362b2db298d5cb41a15953b5fe6f26d5e5406f2e358d3b382e681146b6f2e6e61f234782517bf535471f0c5b9100 
+piccExchange => 906c0000010700 
+piccExchange rx <= 8c53a48b5a0229f3790b04f7f81650539100 
+piccExchange => 90bb0000070800000001000000 
+piccExchange rx <= 7846e97be01de17f001cf11c132937ad4243766aaf069f92183326630a2bf4640b9f57ceadec6ee0b654504255d4760b9100 
+piccExchange => 90bb0000070801000001000000 
+piccExchange rx <= d04d96fb7af2fcfd3b85f18ce386dd107749f4f88db12aa3e04bcca1ea42716c9a83527b7d1690f05d46ac2ad22f24479100 
+piccExchange => 90bb0000070802000001000000 
+piccExchange rx <= 0609a2e12a9133480b184d4de1caf2586d7cfa6a530047b425092b2d38805e3a652d46c4d6cc9a3c51f045830de026a39100 
+piccExchange => 90bb0000070803000001000000 
+piccExchange rx <= 4ea165f9b3000108a668943d143c39908580bc8f1f70a633389c2abdcd0d98ff5f3296b2105a5b08fe80b27ad0c00ed19100 
+piccExchange => 90bb0000070804000001000000 
+piccExchange rx <= d1464ad83bdfe56d82b5583b352a2efbbb815113b10a03645bb512ccda9a60605e33337417fb20d8483eb55c3e57525c9100 
+piccExchange => 90bb0000070805000001000000 
+piccExchange rx <= bcb0522aa16f68967312f0768974b032050807ec97455e248008ad84b8b9e8dff22080a4d8acce2cf0163a27cbea75559100 
+piccExchange => 90bb0000070806000001000000 
+piccExchange rx <= a67caceaef882d1e595aa18c58670e437f997e648f0f7475cb47455532feefb23c6c0ccdf19ca24b10d533110ea4390a9100 
+piccExchange => 90bb0000070807000001000000 
+piccExchange rx <= 1245aa6f435decf4346257755df1c716780c951b3597a28e2bbefa34b7a29b9b00381dfe29d601c8b490a997bc801b289100 
+piccExchange => 90bb0000070808000001000000 
+piccExchange rx <= 8b041461e87e57514d15f9556913f332db72f6f9a1a73dc285e051dfc5940e95fff58800fba72ab85176e6377a62cfe89100 
+piccExchange => 90bb0000070809000001000000 
+piccExchange rx <= 7104bdf650e515e725fb6b38bf34fd9875a12c146dfac49b4129a3dca12caed48c534064578a951257f3e65ac3edb05c9100 
+piccExchange => 90bb000007080a000001000000 
+piccExchange rx <= 05e84b8f9c0dff578ed8e7968653bbd54c427c2cc8a9e4642092905d1ad28334d1849089178d77d06735eedec06a859a9100 
+piccExchange => 90bb000007080b000001000000 
+piccExchange rx <= 018709b864eb1a595ece8e8a78880e37ace4260bf2671dce2e07520b4c823e3e81e0968712b344f78353b3944209ed2d9100 
+piccExchange => 90bb000007080c000001000000 
+piccExchange rx <= 990d7cbdd4b9226d415fe14f0065d6a9fd8014e160825319b24eb723415b7551910368279242499e5fe39832d35017c69100 
+piccExchange => 90bb000007080d000001000000 
+piccExchange rx <= 0601a93674d7bd2870bf8560a64fcff31c4451dbe5d92b2882d336dd8ec95edf7ecb6b745513f9a3c7aa84361b6e52a09100 
+piccExchange => 90bb000007080e000001000000 
+piccExchange rx <= 3463d075fda6d6bfb92791ee162546384d6fa0b0b1a2f09e693032678a037d5ee66497525bc57a329c00db81ef3a2a469100 
+piccExchange => 90bb000007080f000001000000 
+piccExchange rx <= 97d8480e38381f23d0a68d78c2229c26f9cfa5110b805551ff40c684c6b27943513ceb367d6d211c24a4a232d81afa969100 
+piccExchange => 90bd00000709000000c6000000 
+piccExchange rx <= b31c5d7ea4e5cee2756b57c2f73e55bb2c3bb8a144751f740cdac2005027698de94533adb2bb620ca4126ec7fbdc0d8891af 
+piccExchange => 90af000000 
+piccExchange rx <= 385af5461fd50604b631350aacf1d6bbcead0f8a43e7bf1396a156712c338eab105af7c4e79c2e92883b2f9fbffc904e91af 
+piccExchange => 90af000000 
+piccExchange rx <= 3a0cd35247b7f61cedffb4b6cb245ebf49a2a4350eaa290656656c45546bd7ea8715d909594ae0423a9759db8c70543191af 
+piccExchange => 90af000000 
+piccExchange rx <= c28b6a96f6fb49585b5925954772365698a867e986ca98b8f9a66ce4e691056b70b3cd3f0a275095060b5c8a07ca51d591af 
+piccExchange => 90af000000 
+piccExchange rx <= 560e1245fd4ad280f987358b520bc6f79100 
+readFullCard result : 
+0 
+readFullCard outputData : 
+{
+    "UID": "042f76ca8e2390",
+    "File0": {
+        "IDTarjetaTIT": "0000000004005",
+        "IdEmisorTIT": 14000,
+        "TipoTarjetaTIT": 0,
+        "VersionAplicacionTIT": 0,
+        "DisenoTarjetaTIT": 0,
+        "IdJuegosClavesTIT": 0,
+        "IdSAMInicializacionTIT": "043416FA8E7080",
+        "IdFabricanteTIT": 1,
+        "FechaHoraFabricacionTIT": "28/04/2026T16:53:30"
+    },
+    "File1": {
+        "NumeroClienteTIT": 0,
+        "FechaNacimientoClienteTIT": "00/00/0000",
+        "IdPerfil1": 0,
+        "IdEmpresaPerfil1": 0,
+        "DescuentoPerfil1": 0,
+        "FechaHoraInicioPerfil1": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil1": "00/00/1990T00:00:00",
+        "IdPerfil22": 0,
+        "IdEmpresaPerfil2": 0,
+        "DescuentoPerfil2": 0,
+        "FechaHoraInicioPerfil2": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil2": "00/00/1990T00:00:00",
+        "IdPerfil3": 0,
+        "IdEmpresaPerfil3": 0,
+        "DescuentoPerfil3": 0,
+        "FechaHoraInicioPerfil3": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil3": "00/00/1990T00:00:00"
+    },
+    "File2": {
+        "IdVendedorTIT": 0,
+        "IdPuntoVentaTIT": "00000000000000",
+        "FechaHoraVentaTIT": "00/00/1990T00:00:00",
+        "IdSAMVentaTIT": "00000000000000",
+        "Importe": 0,
+        "FormaPagoVentaTIT": 0,
+        "NAutorizacionEMVTIT": 0,
+        "FechaHoraInicioValidezTIT": "00/00/1990T00:00:00",
+        "FechaHoraFinValidezTIT": "00/00/1990T00:00:00",
+        "DNIClienteTIT": ""
+    },
+    "File3": {
+        "IdTitulo1": 0,
+        "TipoTitulo1": 0,
+        "FlagsCaracteristicasT1": 0,
+        "IdEmpresaTitulo1": 0,
+        "NoTransaccionTITTitulo1": 0,
+        "IdVendedorTitulo1": 0,
+        "IdPuntoVentaTitulo1": "00000000000000",
+        "FechaHoraVentaTitulo1": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo1": "00000000000000",
+        "ImporteTitulo1": 0,
+        "FormaPagoVentaTitulo1": 0,
+        "NoAutorizacionEMVTitulo1": 0,
+        "MultipersonaTitulo1": 0,
+        "SeleccionOperadores1T1": "000000000000",
+        "SeleccionZonas1T1": 0,
+        "SeleccionOperadores2T1": "000000000000",
+        "SeleccionZonas2T1": "0",
+        "FechaHoraInicioCadT1": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT1": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo1": 0,
+        "ValidezDiariaT1": 0,
+        "ValidezHorariaT1": 0,
+        "LimiteViajesT1": 0,
+        "LimiteViajesDiaT1": 0,
+        "UltimoBonoT1": 0
+    },
+    "File4": {
+        "IdTitulo2": 0,
+        "TipoTitulo2": 0,
+        "FlagsCaracteristicasT2": 0,
+        "IdEmpresaTitulo2": 0,
+        "NoTransaccionTITTitulo2": 0,
+        "IdVendedorTitulo2": 0,
+        "IdPuntoVentaTitulo2": "00000000000000",
+        "FechaHoraVentaTitulo2": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo2": "00000000000000",
+        "ImporteTitulo2": 0,
+        "FormaPagoVentaTitulo2": 0,
+        "NoAutorizacionEMVTitulo2": 0,
+        "MultipersonaTitulo2": 0,
+        "SeleccionOperadores1T2": "000000000000",
+        "SeleccionZonas1T2": 0,
+        "SeleccionOperadores2T2": "000000000000",
+        "SeleccionZonas2T2": "0",
+        "FechaHoraInicioCadT2": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT2": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo2": 0,
+        "ValidezDiariaT2": 0,
+        "ValidezHorariaT2": 0,
+        "LimiteViajesT2": 0,
+        "LimiteViajesDiaT2": 0,
+        "UltimoBonoT2": 0
+    },
+    "File5": {
+        "IdTitulo3": 0,
+        "TipoTitulo3": 0,
+        "FlagsCaracteristicasT3": 0,
+        "IdEmpresaTitulo3": 0,
+        "NoTransaccionTITTitulo3": 0,
+        "IdVendedorTitulo3": 0,
+        "IdPuntoVentaTitulo3": "00000000000000",
+        "FechaHoraVentaTitulo3": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo3": "00000000000000",
+        "ImporteTitulo3": 0,
+        "FormaPagoVentaTitulo3": 0,
+        "NoAutorizacionEMVTitulo3": 0,
+        "MultipersonaTitulo3": 0,
+        "SeleccionOperadores1T3": "000000000000",
+        "SeleccionZonas1T3": 0,
+        "SeleccionOperadores2T3": "000000000000",
+        "SeleccionZonas2T3": "0",
+        "FechaHoraInicioCadT3": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT3": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo3": 0,
+        "ValidezDiariaT3": 0,
+        "ValidezHorariaT3": 0,
+        "LimiteViajesT3": 0,
+        "LimiteViajesDiaT3": 0,
+        "UltimoBonoT3": 0
+    },
+    "File7_Valor": 0,
+    "File8": [
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        }
+    ],
+    "File9": {
+        "EstadoTIT": 0,
+        "NotransaccionTIT": 0,
+        "NoAccionTIT": 0,
+        "NoAccionGrupoTIT": 0,
+        "EstadoTitulo1": 0,
+        "EstadoTitulo2": 0,
+        "EstadoTitulo3": 0,
+        "PrioridadTitulo1": 0,
+        "PrioridadTitulo2": 0,
+        "PrioridadTitulo3": 0,
+        "FlagsControlViaje": "000000000000000000000000",
+        "NoEtapaTransbordo": 0,
+        "NoPersonasEntrada": 0,
+        "NoPersonasJuntasEtapa1": 0,
+        "NoPersonasJuntasEtapa2": 0,
+        "NoPersonasJuntasEtapa3": 0,
+        "TarifaAcumuladaViaje": 0,
+        "NoZonasOperador": 0,
+        "NoZonasOperadorAnterior": 0,
+        "NoZonasOperadorAntAnt": 0,
+        "NoTransaccionEntradaPase": 0,
+        "NoPosicionTituloValidado": 0,
+        "IdOperadorServicioInicial": 0,
+        "FechaHoraEntradaOpInicial": "00/00/1990T00:00:00",
+        "PuntoEntradaOpInicial": "00000000000000",
+        "TarifaOperadorInicial": 0,
+        "IdOperadorServicioAnt": 0,
+        "FechaHoraEntradaOpAnt": "00/00/1990T00:00:00",
+        "PuntoEntradaOpAnt": "00000000000000",
+        "TarifaOperadorAnt": 0,
+        "IdOperadorServicio": 0,
+        "FechaHoraEntradaOp": "00/00/1990T00:00:00",
+        "PuntoEntradaOp": "00000000000000",
+        "TarifaOperador": 0,
+        "FechaHoraSalidaOp": "00/00/1990T00:00:00",
+        "PuntoSalidaOp": "00000000000000",
+        "IdOperadorServicioComp": 0,
+        "FechaHoraEntradaOpComp": "00/00/1990T00:00:00",
+        "PuntoEntradaOpComp": "00000000000000",
+        "TarifaOperadorComp": 0,
+        "NoPersonasEntradaComp": 0,
+        "NoPersonasJuntasComp": 0,
+        "NoPosicionPaseValidado": 0,
+        "IdOperadorServicioPase": 0,
+        "FechaHoraEntradaOpPase": "00/00/1990T00:00:00",
+        "PuntoEntradaOpPase": "00000000000000",
+        "TipoValidacionPase": 0,
+        "NoViajesAcumuladosPase": 0,
+        "FechaHoraInicioActT1": "00/00/1990T00:00:00",
+        "FechaHoraFinActT1": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT1": 0,
+        "SaldoLimiteViajesDiaT1": 0,
+        "FechaHoraLimiteDiaT1": "00/00/1990T00:00:00",
+        "SaldoBonoT1": 0,
+        "FechaHoraInicioActT2": "00/00/1990T00:00:00",
+        "FechaHoraFinActT2": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT2": 0,
+        "SaldoLimiteViajesDiaT2": 0,
+        "FechaHoraLimiteDiaT2": "00/00/1990T00:00:00",
+        "SaldoBonoT2": 0,
+        "FechaHoraInicioActT3": "00/00/1990T00:00:00",
+        "FechaHoraFinActT3": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT3": 0,
+        "SaldoLimiteViajesDiaT3": 0,
+        "FechaHoraLimiteDiaT3": "00/00/1990T00:00:00",
+        "SaldoBonoT3": 0
+    }
+} 
+========VALIDATION CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 042f76ca8e2390214335303045259100 
+piccExchange => 90aa0000010700 
+piccExchange rx <= d97ad54025fedc0d932928ea05d3a78a91af 
+samExchange tx => 800a1100220900d97ad54025fedc0d932928ea05d3a78a042f76ca8e239000fbd0893571dc6fff00 
+samExchange rx <= a2a6e0e771f9da20b2021ad96ebd0c5703c851360a6477981f44656146ac892d90af 
+piccExchange => 90af000020a2a6e0e771f9da20b2021ad96ebd0c5703c851360a6477981f44656146ac892d00 
+piccExchange rx <= edf932dfd37669b18f1055048d7fec739100 
+samExchange tx => 800a000010edf932dfd37669b18f1055048d7fec73 
+samExchange rx <= 9000 
+samExchange tx => 80d5000000 
+samExchange rx <= 7df01105f9ce41ef35ed27d6411f86cd9000 
+piccExchange => 90bd0000070000000020000000 
+piccExchange rx <= 6b2562c7908e43d6bf1db1b1d716efe8325e8d051a2bce0200d5fa98bf34986b2612b1cb168cbaed778f5708a8e247009100 
+piccExchange => 90bd000007010000002f000000 
+piccExchange rx <= 0285ab59b8f78a7198025408d0e4e7333aa98ef3ad055224c109465d618fa25802443384c3a21c09b8eb8d59929226b691af 
+piccExchange => 90af000000 
+piccExchange rx <= fc73f2bb990de8483db529f0c8b30b849100 
+piccExchange => 90bd0000070200000031000000 
+piccExchange rx <= b343d722a99e9803edd467a5de02a524eaeed452a367454073a3c68e5bfa5c68db9c96c56384ed77ec7b4e8819773ef191af 
+piccExchange => 90af000000 
+piccExchange rx <= 26c4c61405bf195fcbddace70ab7b9949100 
+piccExchange => 90bd00000709000000c6000000 
+piccExchange rx <= 795f73b64c0944198de420abb13889807e26c82fa46e882d61c6d9f759c8f65645729a173e339762ede2269ef08650f191af 
+piccExchange => 90af000000 
+piccExchange rx <= 5c1eef5e35f26dd5dca1f55bf99ab3b40f23189801b0215f51c1fb11b495673952ea646e1c0ad4b58f2bada62a4ed6f691af 
+piccExchange => 90af000000 
+piccExchange rx <= abb049e41f17171acbbea98d76b31efaa9203d1ff1c069192223ef52d5f2b79fb72a88806995e5e78ceb7ebe64606b7491af 
+piccExchange => 90af000000 
+piccExchange rx <= 5109135a43a72880e8991e9679cb46ac48e7688f5469dff2da4b04d6965f58c0e5f68847ed403f4734d5b9a7c570c37d91af 
+piccExchange => 90af000000 
+piccExchange rx <= d27c629239bf1b3ad90981b48e512b879100 
+piccExchange => 906c0000010700 
+piccExchange rx <= a68b45456a8aa0c557802706d1e497469100 
+validate_card result : 
+10 
+outputData : 
+<?xml version="1.0" encoding="UTF-8"?>
+<TransaccionPenalizacion xsi:noNamespaceSchemaLocation="TransaccionPenalizacion.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<IdTransaccion>000000000400500000000</IdTransaccion>
+<IdTarjetaTIT>0000000004005</IdTarjetaTIT>
+<UidTarjeta>042F76CA8E2390</UidTarjeta>
+<EstadoTIT>0</EstadoTIT>
+<IdPerfil1>0</IdPerfil1>
+<IdPerfil2>0</IdPerfil2>
+<IdPerfil3>0</IdPerfil3>
+<IdTitulo1>0</IdTitulo1>
+<EstadoTitulo1>0</EstadoTitulo1>
+<EstadoTitulo2>0</EstadoTitulo2>
+<EstadoTitulo3>0</EstadoTitulo3>
+<NoTransaccionTIT>0</NoTransaccionTIT>
+<NoAccionTIT>0</NoAccionTIT>
+<NoAccionGrupoTIT>0</NoAccionGrupoTIT>
+<SaldoMonedero>0</SaldoMonedero>
+<UidSamEquipoCampo>04010103022801</UidSamEquipoCampo>
+<NoEtapaTransbordo>0</NoEtapaTransbordo>
+<NoPersonasDchoTransbordo>0</NoPersonasDchoTransbordo>
+<NoPersonasJuntasEtapa>0</NoPersonasJuntasEtapa>
+<IdOperadorServicioAnt>0</IdOperadorServicioAnt>
+<PuntoEntradaOpAnt>0</PuntoEntradaOpAnt>
+<NoZonasOperadorAnterior>0</NoZonasOperadorAnterior>
+<TarifaOperadorAnt>0</TarifaOperadorAnt>
+<IdOperadorServicio>0</IdOperadorServicio>
+<FechaHoraEntradaOp>1990-00-00T00:00:00</FechaHoraEntradaOp>
+<PuntoEntradaOp>0</PuntoEntradaOp>
+<TarifaNominal>0</TarifaNominal>
+<TarifaCalculada>0</TarifaCalculada>
+<CRC>A53FC72F80E92A8E8F56331D6D2351B1</CRC>
+</TransaccionPenalizacion>
+
+
+message : 
+{"acousticSignal":"","msgDisplay":"","visualSignal":""} 
+========READ FULL CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401010100180591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010104180591af 
+piccExchange => 90af000000 
+piccExchange rx <= 04422112606f80b90c224d6036229100 
+piccExchange => 90aa0000010700 
+piccExchange rx <= 2677c3ac06a6e00aa38b4584f2f10e7e91af 
+samExchange tx => 800a11002209002677c3ac06a6e00aa38b4584f2f10e7e04422112606f8000 fbbddeed9f907fff 00 
+samExchange rx <= 3b84fc509493b5fce3b4b552ec1f7230eaad391f4ce3ba51285a2e572f3f2afd90af 
+piccExchange => 90af0000203b84fc509493b5fce3b4b552ec1f7230eaad391f4ce3ba51285a2e572f3f2afd00 
+piccExchange rx <= e4f05395a9f1b404400171999e28084e9100 
+samExchange tx => 800a000010e4f05395a9f1b404400171999e28084e 
+samExchange rx <= 9000 
+samExchange tx => 80d5000000 
+samExchange rx <= 149c8bd8077fff2a27f6c0687b2e152d9000 
+piccExchange => 90bd0000070000000020000000 
+piccExchange rx <= 2ed108244e4328f9c4dd1ce3ee972c57ec2daca633b12651853759d0e68fbdc16d59e276817654d172d84e93967abc209100 
+piccExchange => 90bd000007010000002f000000 
+piccExchange rx <= 4db1cb679630cb1a0b3041e716399c486efa3dc3974753c5a9a8f28d944ce52c919690e2c1c974ef348cb2577467c30a91af 
+piccExchange => 90af000000 
+piccExchange rx <= 7789548ed0e9201f7ef34fe852a253a99100 
+piccExchange => 90bd0000070200000031000000 
+piccExchange rx <= d5f941ce203461a664999c86f4bd85e0d8994e6f057b3189d6c7c6a350197f8aab6307feb8a194ac39385d9aafaac2e591af 
+piccExchange => 90af000000 
+piccExchange rx <= 6ff83ecb5abd1af29e2794fbd97a63829100 
+piccExchange => 90bd000007030000004e000000 
+piccExchange rx <= c731da323bcd855bc9450ed1938e93dab48c08c72cb8c3f923a687aa210187d65e48446c0a2a2e92d5ad9bd4dd10810c91af 
+piccExchange => 90af000000 
+piccExchange rx <= abca4da62dacee56331b8f9e8f73066df583e496f9a0dd31833673613a180e4e71e024ae80f235a44212b7e8263914909100 
+piccExchange => 90bd000007040000004e000000 
+piccExchange rx <= 2e7df6f5553375e263e57d4977ae6f31cc6885402d8c315275b4afc08c78ff24fae305de8c47cd84cd9f6db93074069591af 
+piccExchange => 90af000000 
+piccExchange rx <= aa0287d1df94e16594a69a0f3cbb257b8af6b91a3001e4e8ca0209eea389a1839ce6501f77f3c1af32806e88704935c99100 
+piccExchange => 90bd000007050000004e000000 
+piccExchange rx <= 2d35b75cfc87f74d708a2c83f9be776bb5bb03fca65ec39b1b4ef860a8154b62316ac33b4424394d1a705802e2c107e491af 
+piccExchange => 90af000000 
+piccExchange rx <= c5a0adf363eaa38102aae7aebab8ff9d2449aed387ec77e52e3253a9338c50eab7c7304491ae683d2437c0dd81de49989100 
+piccExchange => 906c0000010700 
+piccExchange rx <= 94a588509dc87f471a021ed7e87ba5d09100 
+piccExchange => 90bb0000070800000001000000 
+piccExchange rx <= 7e8da465af144a089b11498a2a9f348843d5a85987b04e644ec80a3a722735d4f5e56ad2a7b70b610531ed9a9f8e94a79100 
+piccExchange => 90bb0000070801000001000000 
+piccExchange rx <= 9e5075c01d65fbe9b3a021b7cdbabc3388119f8ecbf0921843cf95e0b53777e70951056f6159eec7479f3f1da6b850809100 
+piccExchange => 90bb0000070802000001000000 
+piccExchange rx <= 22248b6df4b5d6c8716bcfb96222836ddfacd95ee75c250c52cb8cdbf8c7350e672a8fb865a41105e10a0291f77a686a9100 
+piccExchange => 90bb0000070803000001000000 
+piccExchange rx <= 62f3855f548bf4eb43733b39f6f435708d921f7a31f9d36c88451d40a72846a74b1cba84dbfd68f142a03681979f4d469100 
+piccExchange => 90bb0000070804000001000000 
+piccExchange rx <= 5596449a097b937a37ef2ba31bc6eccde4a1f9ff3c43ac640a80c0d4aea22cbca51663bf5423ddccb988a57e3045fe369100 
+piccExchange => 90bb0000070805000001000000 
+piccExchange rx <= ab20b00e45e9bdfe91b4c36f8347f06d7eb9a548fd80f6d99a6f8878294ffa3634eca8173e33d9b9995606634ebfcd109100 
+piccExchange => 90bb0000070806000001000000 
+piccExchange rx <= 4cd302340cc5ef87e92b1fb7c424295f640d6d262ec8981d9446678b7cbc4ea7362353a4d90c181e005f82f9d9bd36529100 
+piccExchange => 90bb0000070807000001000000 
+piccExchange rx <= 00b774b212e71a18d3c006ab4b3deddb3e05c3f2a0ce5fd7c80cb98ae485b0d16235a3b78260a9926ff9022ef5a85d1b9100 
+piccExchange => 90bb0000070808000001000000 
+piccExchange rx <= 0c7c3b7496fccc306834bf18817c7f8b2c294b9a82a4e72dd5d0745f12dc57df8d73cba0bef6d38fa127ea16d11704f29100 
+piccExchange => 90bb0000070809000001000000 
+piccExchange rx <= 09c1895275ff3fed68176c37c7953d82ef70d80a873183a365004b614b29607c55c0bd5aed32a0e2696f4eb72cd7a8bd9100 
+piccExchange => 90bb000007080a000001000000 
+piccExchange rx <= 7b409034e903b32349f9b9ce0ed9ccc5321f84ca82b4a6e0ab22b038ead35933669cb9cf1900ba3c74fc3fa64ac5098f9100 
+piccExchange => 90bb000007080b000001000000 
+piccExchange rx <= d84b7b390b460e46beb5cd770cd223905c0bd705064e759adcf273914f09eb609851d42afe6ad59793d99b1c5cbb9b859100 
+piccExchange => 90bb000007080c000001000000 
+piccExchange rx <= f405a591c6b2e34d23d55d2fb3b2f7a0c722dfb6ace8653bc2cd21d8d1b149aaa76aa0980550f205c564e57ea74ddf159100 
+piccExchange => 90bb000007080d000001000000 
+piccExchange rx <= ecc7218080db8e6516ebcd175ebec8145ea3895868f01009ff9b488eb5ea0c63b7a1c0aa19d388a04ecb4b5c1f2eef829100 
+piccExchange => 90bb000007080e000001000000 
+piccExchange rx <= 130356a6bba14071a6b4671a203f900172d766826e88d3b22266cfd8ada6d743391134ed90a0a7d8bcf29e02b43bc6799100 
+piccExchange => 90bb000007080f000001000000 
+piccExchange rx <= 65e9d5f0b001ba9fe833be2876218b9df2b4ad605be330219ab22aee8dff198a50a223730dea4283124f37c19e4c5faf9100 
+piccExchange => 90bd00000709000000c6000000 
+piccExchange rx <= 3f4b0410689512f3a460092a6b7324eab56c0fdac48f73bdb8ba9b21437c95e6110af8b064e73602876225ca70a07de791af 
+piccExchange => 90af000000 
+piccExchange rx <= 466bc85eb564be6961d6b886fd00aacef2ef4b18da6bdba7c3381f53c8cf9833041f790b3d37bde5d819f0ba878a12fe91af 
+piccExchange => 90af000000 
+piccExchange rx <= 72f074cfa904e1b3f935ec3cb230260e670e185939af67b171fe9b3e121acfe0414893ee649041c016ff25206c7a917091af 
+piccExchange => 90af000000 
+piccExchange rx <= 26032c1bf16e13ce9dbf2110077dcfe4c95a339923823518577268a78846bd53013bea6554d43e4093468e7d327bf4d991af 
+piccExchange => 90af000000 
+piccExchange rx <= 785e87177f5c412f84e975c19d5154929100 
+readFullCard result : 
+0 
+readFullCard outputData : 
+{
+    "UID": "04422112606f80",
+    "File0": {
+        "IDTarjetaTIT": "0010000004043",
+        "IdEmisorTIT": 14000,
+        "TipoTarjetaTIT": 1,
+        "VersionAplicacionTIT": 0,
+        "DisenoTarjetaTIT": 1,
+        "IdJuegosClavesTIT": 0,
+        "IdSAMInicializacionTIT": "043431FA8E7080",
+        "IdFabricanteTIT": 1,
+        "FechaHoraFabricacionTIT": "05/05/2026T16:04:28"
+    },
+    "File1": {
+        "NumeroClienteTIT": 0,
+        "FechaNacimientoClienteTIT": "00/00/0000",
+        "IdPerfil1": 0,
+        "IdEmpresaPerfil1": 0,
+        "DescuentoPerfil1": 0,
+        "FechaHoraInicioPerfil1": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil1": "00/00/1990T00:00:00",
+        "IdPerfil22": 0,
+        "IdEmpresaPerfil2": 0,
+        "DescuentoPerfil2": 0,
+        "FechaHoraInicioPerfil2": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil2": "00/00/1990T00:00:00",
+        "IdPerfil3": 0,
+        "IdEmpresaPerfil3": 0,
+        "DescuentoPerfil3": 0,
+        "FechaHoraInicioPerfil3": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil3": "00/00/1990T00:00:00"
+    },
+    "File2": {
+        "IdVendedorTIT": 0,
+        "IdPuntoVentaTIT": "00000000000000",
+        "FechaHoraVentaTIT": "00/00/1990T00:00:00",
+        "IdSAMVentaTIT": "00000000000000",
+        "Importe": 0,
+        "FormaPagoVentaTIT": 0,
+        "NAutorizacionEMVTIT": 0,
+        "FechaHoraInicioValidezTIT": "00/00/1990T00:00:00",
+        "FechaHoraFinValidezTIT": "00/00/1990T00:00:00",
+        "DNIClienteTIT": ""
+    },
+    "File3": {
+        "IdTitulo1": 0,
+        "TipoTitulo1": 0,
+        "FlagsCaracteristicasT1": 0,
+        "IdEmpresaTitulo1": 0,
+        "NoTransaccionTITTitulo1": 0,
+        "IdVendedorTitulo1": 0,
+        "IdPuntoVentaTitulo1": "00000000000000",
+        "FechaHoraVentaTitulo1": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo1": "00000000000000",
+        "ImporteTitulo1": 0,
+        "FormaPagoVentaTitulo1": 0,
+        "NoAutorizacionEMVTitulo1": 0,
+        "MultipersonaTitulo1": 0,
+        "SeleccionOperadores1T1": "000000000000",
+        "SeleccionZonas1T1": 0,
+        "SeleccionOperadores2T1": "000000000000",
+        "SeleccionZonas2T1": "0",
+        "FechaHoraInicioCadT1": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT1": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo1": 0,
+        "ValidezDiariaT1": 0,
+        "ValidezHorariaT1": 0,
+        "LimiteViajesT1": 0,
+        "LimiteViajesDiaT1": 0,
+        "UltimoBonoT1": 0
+    },
+    "File4": {
+        "IdTitulo2": 0,
+        "TipoTitulo2": 0,
+        "FlagsCaracteristicasT2": 0,
+        "IdEmpresaTitulo2": 0,
+        "NoTransaccionTITTitulo2": 0,
+        "IdVendedorTitulo2": 0,
+        "IdPuntoVentaTitulo2": "00000000000000",
+        "FechaHoraVentaTitulo2": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo2": "00000000000000",
+        "ImporteTitulo2": 0,
+        "FormaPagoVentaTitulo2": 0,
+        "NoAutorizacionEMVTitulo2": 0,
+        "MultipersonaTitulo2": 0,
+        "SeleccionOperadores1T2": "000000000000",
+        "SeleccionZonas1T2": 0,
+        "SeleccionOperadores2T2": "000000000000",
+        "SeleccionZonas2T2": "0",
+        "FechaHoraInicioCadT2": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT2": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo2": 0,
+        "ValidezDiariaT2": 0,
+        "ValidezHorariaT2": 0,
+        "LimiteViajesT2": 0,
+        "LimiteViajesDiaT2": 0,
+        "UltimoBonoT2": 0
+    },
+    "File5": {
+        "IdTitulo3": 0,
+        "TipoTitulo3": 0,
+        "FlagsCaracteristicasT3": 0,
+        "IdEmpresaTitulo3": 0,
+        "NoTransaccionTITTitulo3": 0,
+        "IdVendedorTitulo3": 0,
+        "IdPuntoVentaTitulo3": "00000000000000",
+        "FechaHoraVentaTitulo3": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo3": "00000000000000",
+        "ImporteTitulo3": 0,
+        "FormaPagoVentaTitulo3": 0,
+        "NoAutorizacionEMVTitulo3": 0,
+        "MultipersonaTitulo3": 0,
+        "SeleccionOperadores1T3": "000000000000",
+        "SeleccionZonas1T3": 0,
+        "SeleccionOperadores2T3": "000000000000",
+        "SeleccionZonas2T3": "0",
+        "FechaHoraInicioCadT3": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT3": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo3": 0,
+        "ValidezDiariaT3": 0,
+        "ValidezHorariaT3": 0,
+        "LimiteViajesT3": 0,
+        "LimiteViajesDiaT3": 0,
+        "UltimoBonoT3": 0
+    },
+    "File7_Valor": 0,
+    "File8": [
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        }
+    ],
+    "File9": {
+        "EstadoTIT": 0,
+        "NotransaccionTIT": 0,
+        "NoAccionTIT": 0,
+        "NoAccionGrupoTIT": 0,
+        "EstadoTitulo1": 0,
+        "EstadoTitulo2": 0,
+        "EstadoTitulo3": 0,
+        "PrioridadTitulo1": 0,
+        "PrioridadTitulo2": 0,
+        "PrioridadTitulo3": 0,
+        "FlagsControlViaje": "000000000000000000000000",
+        "NoEtapaTransbordo": 0,
+        "NoPersonasEntrada": 0,
+        "NoPersonasJuntasEtapa1": 0,
+        "NoPersonasJuntasEtapa2": 0,
+        "NoPersonasJuntasEtapa3": 0,
+        "TarifaAcumuladaViaje": 0,
+        "NoZonasOperador": 0,
+        "NoZonasOperadorAnterior": 0,
+        "NoZonasOperadorAntAnt": 0,
+        "NoTransaccionEntradaPase": 0,
+        "NoPosicionTituloValidado": 0,
+        "IdOperadorServicioInicial": 0,
+        "FechaHoraEntradaOpInicial": "00/00/1990T00:00:00",
+        "PuntoEntradaOpInicial": "00000000000000",
+        "TarifaOperadorInicial": 0,
+        "IdOperadorServicioAnt": 0,
+        "FechaHoraEntradaOpAnt": "00/00/1990T00:00:00",
+        "PuntoEntradaOpAnt": "00000000000000",
+        "TarifaOperadorAnt": 0,
+        "IdOperadorServicio": 0,
+        "FechaHoraEntradaOp": "00/00/1990T00:00:00",
+        "PuntoEntradaOp": "00000000000000",
+        "TarifaOperador": 0,
+        "FechaHoraSalidaOp": "00/00/1990T00:00:00",
+        "PuntoSalidaOp": "00000000000000",
+        "IdOperadorServicioComp": 0,
+        "FechaHoraEntradaOpComp": "00/00/1990T00:00:00",
+        "PuntoEntradaOpComp": "00000000000000",
+        "TarifaOperadorComp": 0,
+        "NoPersonasEntradaComp": 0,
+        "NoPersonasJuntasComp": 0,
+        "NoPosicionPaseValidado": 0,
+        "IdOperadorServicioPase": 0,
+        "FechaHoraEntradaOpPase": "00/00/1990T00:00:00",
+        "PuntoEntradaOpPase": "00000000000000",
+        "TipoValidacionPase": 0,
+        "NoViajesAcumuladosPase": 0,
+        "FechaHoraInicioActT1": "00/00/1990T00:00:00",
+        "FechaHoraFinActT1": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT1": 0,
+        "SaldoLimiteViajesDiaT1": 0,
+        "FechaHoraLimiteDiaT1": "00/00/1990T00:00:00",
+        "SaldoBonoT1": 0,
+        "FechaHoraInicioActT2": "00/00/1990T00:00:00",
+        "FechaHoraFinActT2": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT2": 0,
+        "SaldoLimiteViajesDiaT2": 0,
+        "FechaHoraLimiteDiaT2": "00/00/1990T00:00:00",
+        "SaldoBonoT2": 0,
+        "FechaHoraInicioActT3": "00/00/1990T00:00:00",
+        "FechaHoraFinActT3": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT3": 0,
+        "SaldoLimiteViajesDiaT3": 0,
+        "FechaHoraLimiteDiaT3": "00/00/1990T00:00:00",
+        "SaldoBonoT3": 0
+    }
+} 
+========VALIDATION CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401010100180591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010104180591af 
+piccExchange => 90af000000 
+piccExchange rx <= 04422112606f80b90c224d6036229100 
+piccExchange => 90aa0000010700 
+piccExchange rx <= 90a6f96b181fb7a290469d70b2d9225091af 
+samExchange tx => 800a110022090090a6f96b181fb7a290469d70b2d9225004422112606f8000fbbddeed9f907fff00 
+samExchange rx <= b3f2cd29633c88e2bf17ff671faa0670cabf7e008f06f80dddcfd2305dd5291190af 
+piccExchange => 90af000020b3f2cd29633c88e2bf17ff671faa0670cabf7e008f06f80dddcfd2305dd5291100 
+piccExchange rx <= 0aa8a4f70262f9521af47fa4854eff379100 
+samExchange tx => 800a0000100aa8a4f70262f9521af47fa4854eff37 
+samExchange rx <= 9000 
+samExchange tx => 80d5000000 
+samExchange rx <= 99f0807b74724e99ec8fafbb2c8979599000 
+piccExchange => 90bd0000070000000020000000 
+piccExchange rx <= 6fac395bea9f455a693b802c21ae13963b3147113cc1ffec9ce3f95d4bcc9bd24713a6bb9bf29d1ccc31425321fe4c809100 
+piccExchange => 90bd000007010000002f000000 
+piccExchange rx <= 410d3af216e0dd0b0b7aae1f627f1f9fad7efea22cde9f2aed3c40965e5c23c282325170383989fdd9220b7f59ebe01691af 
+piccExchange => 90af000000 
+piccExchange rx <= a63694905ca2ae610a4043b105a2db819100 
+piccExchange => 90bd0000070200000031000000 
+piccExchange rx <= 7b6f24bca55c1d60b246708fac53f43325726b193b653591f972faff9572fc424182638ec0acd4b67ee942a26b91362591af 
+piccExchange => 90af000000 
+piccExchange rx <= 6176ff89b022bcfb0b447e9303d59cca9100 
+piccExchange => 90bd00000709000000c6000000 
+piccExchange rx <= 63b80e1156a83f498ef7aea20ea77063cc8a5f1ae4a72125df9543733b2810f56150fef17b66664ad7970f3fa1724da291af 
+piccExchange => 90af000000 
+piccExchange rx <= 031f39e48a9367d1c0734cc43e850c7f9d6ccace331b368e30bfd32fcbfeb32623bbbc568b243132302fa3b37b4e8c3791af 
+piccExchange => 90af000000 
+piccExchange rx <= 1f86110949b7379120651111a0cd1a148c293a1ae99f90a343bee4e8111965b1e36f250bbf5e37f24a292b94038ef1c191af 
+piccExchange => 90af000000 
+piccExchange rx <= a0a9154a43de26a0043948953298a76742d4d8d8e3996d1bfd741da51e6ca3622b68ce1f786aecdb547080389c19f41591af 
+piccExchange => 90af000000 
+piccExchange rx <= 1d65ebe90de6a89e6f2008d91a84991a9100 
+piccExchange => 906c0000010700 
+piccExchange rx <= 74c86974b5791a90d07a1aeb602ec5df9100 
+validate_card result : 
+10 
+outputData : 
+<?xml version="1.0" encoding="UTF-8"?>
+<TransaccionPenalizacion xsi:noNamespaceSchemaLocation="TransaccionPenalizacion.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<IdTransaccion>001000000404300000000</IdTransaccion>
+<IdTarjetaTIT>0010000004043</IdTarjetaTIT>
+<UidTarjeta>04422112606F80</UidTarjeta>
+<EstadoTIT>0</EstadoTIT>
+<IdPerfil1>0</IdPerfil1>
+<IdPerfil2>0</IdPerfil2>
+<IdPerfil3>0</IdPerfil3>
+<IdTitulo1>0</IdTitulo1>
+<EstadoTitulo1>0</EstadoTitulo1>
+<EstadoTitulo2>0</EstadoTitulo2>
+<EstadoTitulo3>0</EstadoTitulo3>
+<NoTransaccionTIT>0</NoTransaccionTIT>
+<NoAccionTIT>0</NoAccionTIT>
+<NoAccionGrupoTIT>0</NoAccionGrupoTIT>
+<SaldoMonedero>0</SaldoMonedero>
+<UidSamEquipoCampo>04010103022801</UidSamEquipoCampo>
+<NoEtapaTransbordo>0</NoEtapaTransbordo>
+<NoPersonasDchoTransbordo>0</NoPersonasDchoTransbordo>
+<NoPersonasJuntasEtapa>0</NoPersonasJuntasEtapa>
+<IdOperadorServicioAnt>0</IdOperadorServicioAnt>
+<PuntoEntradaOpAnt>0</PuntoEntradaOpAnt>
+<NoZonasOperadorAnterior>0</NoZonasOperadorAnterior>
+<TarifaOperadorAnt>0</TarifaOperadorAnt>
+<IdOperadorServicio>0</IdOperadorServicio>
+<FechaHoraEntradaOp>1990-00-00T00:00:00</FechaHoraEntradaOp>
+<PuntoEntradaOp>0</PuntoEntradaOp>
+<TarifaNominal>0</TarifaNominal>
+<TarifaCalculada>0</TarifaCalculada>
+<CRC>897E5B5BF6E45A808B6848B755E4DA62</CRC>
+</TransaccionPenalizacion>
+
+
+message : 
+{"acousticSignal":"","msgDisplay":"","visualSignal":""} 
+========READ FULL CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 045d72ca8e2390214335303045259100 
+piccExchange => 90aa0000010700 
+piccExchange rx <= 758eaa06e6d08bc9c5717f505bba3cb991af 
+samExchange tx => 800a1100220900758eaa06e6d08bc9c5717f505bba3cb9045d72ca8e239000 fba28d3571dc6fff 00 
+samExchange rx <= 0a2e2f659ade5416b1f621d2275f43bfcb34651e8b3703f438b4b349699323c690af 
+piccExchange => 90af0000200a2e2f659ade5416b1f621d2275f43bfcb34651e8b3703f438b4b349699323c600 
+piccExchange rx <= 808ba0f232a30623172bfd9e7b50fc609100 
+samExchange tx => 800a000010808ba0f232a30623172bfd9e7b50fc60 
+samExchange rx <= 9000 
+samExchange tx => 80d5000000 
+samExchange rx <= 28f151348cbbe65e21b9209d5e0038459000 
+piccExchange => 90bd0000070000000020000000 
+piccExchange rx <= 8df8d4a4a6951788fe858fd05426c757c4183b142c659bba85562a2e65871a91cbbe0bd6434e086aae1970a5f4b6a62a9100 
+piccExchange => 90bd000007010000002f000000 
+piccExchange rx <= 43d3fa9a7051b990343f83f1ab2e9c600bbe74c1fad83a61618a5122e80487e7b8bdb79f5445d220dac050cf41434fa691af 
+piccExchange => 90af000000 
+piccExchange rx <= 469cac7775e14a3ad7e5a05dd302b7809100 
+piccExchange => 90bd0000070200000031000000 
+piccExchange rx <= 7a4951bdd9c2d2b9b212fa9a2ba65e31c7ec09e8e9d054eb8e760ad8cf98b3dab1a9d35ec3b49d9a624fea980e7ba37691af 
+piccExchange => 90af000000 
+piccExchange rx <= 489058ceaa69f8127fcfec43a9c1fc259100 
+piccExchange => 90bd000007030000004e000000 
+piccExchange rx <= ce2023c78250ffcf93382b92d735dbc98f8a2ec5fde95e46173c69a4091824032eb8e0f7f462c400676f50fb8887a2e391af 
+piccExchange => 90af000000 
+piccExchange rx <= f543965975b0cb95e782546638ac11d836bc9840a35ae3fd0d8ed51dfff6fa78a40ee0845354e69c1a92b7a767d155779100 
+piccExchange => 90bd000007040000004e000000 
+piccExchange rx <= 3ca37cfce76f97589542b80fafbf4f287f297692dd4585840b008f385043eb669425b9511c08eaa459e05792922e31ac91af 
+piccExchange => 90af000000 
+piccExchange rx <= 2aa68036e52ecc4116784bdfc20401c95fd8d7a19f2924a43b429cf60ef0e3005eebf2412f157d1fe6504cd6826647f19100 
+piccExchange => 90bd000007050000004e000000 
+piccExchange rx <= 19998c6c2710e3d3acd2725645300bfbd59b1f4d50eacfd9fafea8d4e2107f3787b749ab3c33fc238e05b2ecaa14f1e091af 
+piccExchange => 90af000000 
+piccExchange rx <= ef7f2c6ce8121eea0ec788bf3ddbaefc7a2ba5b28d1f38aa238711178236d9934d179da526fbced2a6ae9cd861bf26fd9100 
+piccExchange => 906c0000010700 
+piccExchange rx <= 7217438177544d6fd38df1f8149e5a569100 
+piccExchange => 90bb0000070800000001000000 
+piccExchange rx <= 3b02fbed0db14c1954ba1240a272f59a643918638cec5a734e0e9b6b1f46c2b021ce24960052389546ca7f2ba08901a09100 
+piccExchange => 90bb0000070801000001000000 
+piccExchange rx <= 1b20a12bb231f3a4fbdad7c47aebe326d08acea3e255919336f90647bfafb2a8061dff06f45ccef82f929b8591c2ede69100 
+piccExchange => 90bb0000070802000001000000 
+piccExchange rx <= 6b435ecc45bd1de239c22bf87d79035de11dea34bf3edc2e7cd432d0a1d0295dd3b2d0402075d6f04151585e279b72989100 
+piccExchange => 90bb0000070803000001000000 
+piccExchange rx <= 66e54f4bd2964af1654dc5f7806ba988a518b3156df1312047b2c731f2ccc32a6939437cb145eaedd801e5bc5f10626c9100 
+piccExchange => 90bb0000070804000001000000 
+piccExchange rx <= 9198c377bb25ecd303a677fe1f821ec7040fc0bed2322a6a16d0d0d399ad91d7a9995f44edbfd4f4e09acd5a50d30adf9100 
+piccExchange => 90bb0000070805000001000000 
+piccExchange rx <= aa05fd41e0a1cbade1968dd551fde223813ee41f999fb15a22d23b53ff2433b600975549b73efcc92af6f11af9de4cfe9100 
+piccExchange => 90bb0000070806000001000000 
+piccExchange rx <= 6ff411b0e2137b97a495332a8d40551c123ee8299fc74e70a4ad05daf68ca12608cd1a293679e20060d257a4516c41b69100 
+piccExchange => 90bb0000070807000001000000 
+piccExchange rx <= 754842804bf6728e4f38c09b50adfacd63508f8d862a9a6da262943ada176e2941f07496b7b890277d55d0a68c9dbcbb9100 
+piccExchange => 90bb0000070808000001000000 
+piccExchange rx <= 48485b0aea6e5f32c89a2555dae178ab6e32763de27d8308217264ac760c88c4aa9b6f433d2c7af8bf73d00b746bd03f9100 
+piccExchange => 90bb0000070809000001000000 
+piccExchange rx <= 2af59ab64d601692270c97e8542edf43e1264de537ff8a5d68a155855a6c3125f61fb58c68a2fc02d89f1c97ef8dde929100 
+piccExchange => 90bb000007080a000001000000 
+piccExchange rx <= 1a9ede7742d7f3653c2f65e06596c8bace38954adaf83347454ef0e8a327c9a92a679864f27de126fdd9aec45e594f0c9100 
+piccExchange => 90bb000007080b000001000000 
+piccExchange rx <= 98658cc1de031d1d38185de819f7e8226c40734bb1d5f0fbad3c663dd7832e1dcc9adec6dbb59129373c620be5e309a89100 
+piccExchange => 90bb000007080c000001000000 
+piccExchange rx <= 5bf51e968ef52b88d35b3bc4612a8250bb0c96b202bb1c9401baf77007de2769238e7ce9bd84c8558673fd6edc9a51389100 
+piccExchange => 90bb000007080d000001000000 
+piccExchange rx <= db43836d90e05121aef92c7f892a9be3d44e9607a8b5846c0934b04171b38dac3eac8641be7b84fbd957104dd832c5209100 
+piccExchange => 90bb000007080e000001000000 
+piccExchange rx <= ec83b991eb345fa2b51fd90420a8eaaf7dd3679deb2212762e7945435d988868de92d2ced4d616ae73646d703b050fc49100 
+piccExchange => 90bb000007080f000001000000 
+piccExchange rx <= 7b10d7ecb6b4cd938767b691c2e03c0ae5958da123c48b53d0164d2254c773853b3cf69ea670dadc624ef562431e31969100 
+piccExchange => 90bd00000709000000c6000000 
+piccExchange rx <= 7c0d985a6a072faf95713dce1a49e0421ec19c6449ed78b3e110d58ecd2aabaaed3349b5a00dc066ddabbe8ea47f221e91af 
+piccExchange => 90af000000 
+piccExchange rx <= e60e0e8b9ea1dce21b3541272a80d759106daba8a2b3eb6baca999331ff8ce9a0c8d386f68268c790a42f20215c6ac3f91af 
+piccExchange => 90af000000 
+piccExchange rx <= 04659a5763c891b337996ed5071e483b1ad501fce36154160f40cf940407ce2e320a755df5252a301e4246da684b71a291af 
+piccExchange => 90af000000 
+piccExchange rx <= fc819168578e0061ba115b8ba052da3bac26452851d3814fba5119a80f1f8c41325980d7f1b639727b5451f0e5c1d45191af 
+piccExchange => 90af000000 
+piccExchange rx <= 241718666d2931ca474eefcf6566ca859100 
+readFullCard result : 
+0 
+readFullCard outputData : 
+{
+    "UID": "045d72ca8e2390",
+    "File0": {
+        "IDTarjetaTIT": "0000000004006",
+        "IdEmisorTIT": 14000,
+        "TipoTarjetaTIT": 0,
+        "VersionAplicacionTIT": 0,
+        "DisenoTarjetaTIT": 0,
+        "IdJuegosClavesTIT": 0,
+        "IdSAMInicializacionTIT": "043431FA8E7080",
+        "IdFabricanteTIT": 1,
+        "FechaHoraFabricacionTIT": "05/05/2026T16:05:46"
+    },
+    "File1": {
+        "NumeroClienteTIT": 0,
+        "FechaNacimientoClienteTIT": "00/00/0000",
+        "IdPerfil1": 0,
+        "IdEmpresaPerfil1": 0,
+        "DescuentoPerfil1": 0,
+        "FechaHoraInicioPerfil1": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil1": "00/00/1990T00:00:00",
+        "IdPerfil22": 0,
+        "IdEmpresaPerfil2": 0,
+        "DescuentoPerfil2": 0,
+        "FechaHoraInicioPerfil2": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil2": "00/00/1990T00:00:00",
+        "IdPerfil3": 0,
+        "IdEmpresaPerfil3": 0,
+        "DescuentoPerfil3": 0,
+        "FechaHoraInicioPerfil3": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil3": "00/00/1990T00:00:00"
+    },
+    "File2": {
+        "IdVendedorTIT": 0,
+        "IdPuntoVentaTIT": "00000000000000",
+        "FechaHoraVentaTIT": "00/00/1990T00:00:00",
+        "IdSAMVentaTIT": "00000000000000",
+        "Importe": 0,
+        "FormaPagoVentaTIT": 0,
+        "NAutorizacionEMVTIT": 0,
+        "FechaHoraInicioValidezTIT": "00/00/1990T00:00:00",
+        "FechaHoraFinValidezTIT": "00/00/1990T00:00:00",
+        "DNIClienteTIT": ""
+    },
+    "File3": {
+        "IdTitulo1": 0,
+        "TipoTitulo1": 0,
+        "FlagsCaracteristicasT1": 0,
+        "IdEmpresaTitulo1": 0,
+        "NoTransaccionTITTitulo1": 0,
+        "IdVendedorTitulo1": 0,
+        "IdPuntoVentaTitulo1": "00000000000000",
+        "FechaHoraVentaTitulo1": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo1": "00000000000000",
+        "ImporteTitulo1": 0,
+        "FormaPagoVentaTitulo1": 0,
+        "NoAutorizacionEMVTitulo1": 0,
+        "MultipersonaTitulo1": 0,
+        "SeleccionOperadores1T1": "000000000000",
+        "SeleccionZonas1T1": 0,
+        "SeleccionOperadores2T1": "000000000000",
+        "SeleccionZonas2T1": "0",
+        "FechaHoraInicioCadT1": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT1": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo1": 0,
+        "ValidezDiariaT1": 0,
+        "ValidezHorariaT1": 0,
+        "LimiteViajesT1": 0,
+        "LimiteViajesDiaT1": 0,
+        "UltimoBonoT1": 0
+    },
+    "File4": {
+        "IdTitulo2": 0,
+        "TipoTitulo2": 0,
+        "FlagsCaracteristicasT2": 0,
+        "IdEmpresaTitulo2": 0,
+        "NoTransaccionTITTitulo2": 0,
+        "IdVendedorTitulo2": 0,
+        "IdPuntoVentaTitulo2": "00000000000000",
+        "FechaHoraVentaTitulo2": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo2": "00000000000000",
+        "ImporteTitulo2": 0,
+        "FormaPagoVentaTitulo2": 0,
+        "NoAutorizacionEMVTitulo2": 0,
+        "MultipersonaTitulo2": 0,
+        "SeleccionOperadores1T2": "000000000000",
+        "SeleccionZonas1T2": 0,
+        "SeleccionOperadores2T2": "000000000000",
+        "SeleccionZonas2T2": "0",
+        "FechaHoraInicioCadT2": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT2": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo2": 0,
+        "ValidezDiariaT2": 0,
+        "ValidezHorariaT2": 0,
+        "LimiteViajesT2": 0,
+        "LimiteViajesDiaT2": 0,
+        "UltimoBonoT2": 0
+    },
+    "File5": {
+        "IdTitulo3": 0,
+        "TipoTitulo3": 0,
+        "FlagsCaracteristicasT3": 0,
+        "IdEmpresaTitulo3": 0,
+        "NoTransaccionTITTitulo3": 0,
+        "IdVendedorTitulo3": 0,
+        "IdPuntoVentaTitulo3": "00000000000000",
+        "FechaHoraVentaTitulo3": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo3": "00000000000000",
+        "ImporteTitulo3": 0,
+        "FormaPagoVentaTitulo3": 0,
+        "NoAutorizacionEMVTitulo3": 0,
+        "MultipersonaTitulo3": 0,
+        "SeleccionOperadores1T3": "000000000000",
+        "SeleccionZonas1T3": 0,
+        "SeleccionOperadores2T3": "000000000000",
+        "SeleccionZonas2T3": "0",
+        "FechaHoraInicioCadT3": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT3": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo3": 0,
+        "ValidezDiariaT3": 0,
+        "ValidezHorariaT3": 0,
+        "LimiteViajesT3": 0,
+        "LimiteViajesDiaT3": 0,
+        "UltimoBonoT3": 0
+    },
+    "File7_Valor": 0,
+    "File8": [
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        }
+    ],
+    "File9": {
+        "EstadoTIT": 0,
+        "NotransaccionTIT": 0,
+        "NoAccionTIT": 0,
+        "NoAccionGrupoTIT": 0,
+        "EstadoTitulo1": 0,
+        "EstadoTitulo2": 0,
+        "EstadoTitulo3": 0,
+        "PrioridadTitulo1": 0,
+        "PrioridadTitulo2": 0,
+        "PrioridadTitulo3": 0,
+        "FlagsControlViaje": "000000000000000000000000",
+        "NoEtapaTransbordo": 0,
+        "NoPersonasEntrada": 0,
+        "NoPersonasJuntasEtapa1": 0,
+        "NoPersonasJuntasEtapa2": 0,
+        "NoPersonasJuntasEtapa3": 0,
+        "TarifaAcumuladaViaje": 0,
+        "NoZonasOperador": 0,
+        "NoZonasOperadorAnterior": 0,
+        "NoZonasOperadorAntAnt": 0,
+        "NoTransaccionEntradaPase": 0,
+        "NoPosicionTituloValidado": 0,
+        "IdOperadorServicioInicial": 0,
+        "FechaHoraEntradaOpInicial": "00/00/1990T00:00:00",
+        "PuntoEntradaOpInicial": "00000000000000",
+        "TarifaOperadorInicial": 0,
+        "IdOperadorServicioAnt": 0,
+        "FechaHoraEntradaOpAnt": "00/00/1990T00:00:00",
+        "PuntoEntradaOpAnt": "00000000000000",
+        "TarifaOperadorAnt": 0,
+        "IdOperadorServicio": 0,
+        "FechaHoraEntradaOp": "00/00/1990T00:00:00",
+        "PuntoEntradaOp": "00000000000000",
+        "TarifaOperador": 0,
+        "FechaHoraSalidaOp": "00/00/1990T00:00:00",
+        "PuntoSalidaOp": "00000000000000",
+        "IdOperadorServicioComp": 0,
+        "FechaHoraEntradaOpComp": "00/00/1990T00:00:00",
+        "PuntoEntradaOpComp": "00000000000000",
+        "TarifaOperadorComp": 0,
+        "NoPersonasEntradaComp": 0,
+        "NoPersonasJuntasComp": 0,
+        "NoPosicionPaseValidado": 0,
+        "IdOperadorServicioPase": 0,
+        "FechaHoraEntradaOpPase": "00/00/1990T00:00:00",
+        "PuntoEntradaOpPase": "00000000000000",
+        "TipoValidacionPase": 0,
+        "NoViajesAcumuladosPase": 0,
+        "FechaHoraInicioActT1": "00/00/1990T00:00:00",
+        "FechaHoraFinActT1": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT1": 0,
+        "SaldoLimiteViajesDiaT1": 0,
+        "FechaHoraLimiteDiaT1": "00/00/1990T00:00:00",
+        "SaldoBonoT1": 0,
+        "FechaHoraInicioActT2": "00/00/1990T00:00:00",
+        "FechaHoraFinActT2": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT2": 0,
+        "SaldoLimiteViajesDiaT2": 0,
+        "FechaHoraLimiteDiaT2": "00/00/1990T00:00:00",
+        "SaldoBonoT2": 0,
+        "FechaHoraInicioActT3": "00/00/1990T00:00:00",
+        "FechaHoraFinActT3": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT3": 0,
+        "SaldoLimiteViajesDiaT3": 0,
+        "FechaHoraLimiteDiaT3": "00/00/1990T00:00:00",
+        "SaldoBonoT3": 0
+    }
+} 
+========VALIDATION CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 045d72ca8e2390214335303045259100 
+piccExchange => 90aa0000010700 
+piccExchange rx <= 08319d7d76600ad2514f613ee9b032a091af 
+samExchange tx => 800a110022090008319d7d76600ad2514f613ee9b032a0045d72ca8e239000fba28d3571dc6fff00 
+samExchange rx <= 8f9cc202adde34214a5aec0e452e6e59429874b09ecb3dddf646e9a5716eec3f90af 
+piccExchange => 90af0000208f9cc202adde34214a5aec0e452e6e59429874b09ecb3dddf646e9a5716eec3f00 
+piccExchange rx <= 6eafb5c54c0b26fe1e3dc534a0b6e8f09100 
+samExchange tx => 800a0000106eafb5c54c0b26fe1e3dc534a0b6e8f0 
+samExchange rx <= 9000 
+samExchange tx => 80d5000000 
+samExchange rx <= b424a47ae006256ca702ee1f03147b749000 
+piccExchange => 90bd0000070000000020000000 
+piccExchange rx <= 9353142a8c5e16fddf10d3b90eb220770eda4e2544940955c46b250f99bff79288cbac1138a24af358ada40d816975a39100 
+piccExchange => 90bd000007010000002f000000 
+piccExchange rx <= 6414277caec91f406cbad2c7743f2e6d28040ce7206f3d63f665e2ad35c027c2683c961ce803f9448d0ab565670c5b9b91af 
+piccExchange => 90af000000 
+piccExchange rx <= 9ef80138ffd7cb54998652716ba09a909100 
+piccExchange => 90bd0000070200000031000000 
+piccExchange rx <= 5a2ebac612c78ab9b4b50b7b579c0c23413b4f8f9ba693e47aa44acfa626b8852c8213aede0113f00ed2ef694eb2f83991af 
+piccExchange => 90af000000 
+piccExchange rx <= 0d1bcecd47ec7ea04d1dfefbe73bd85a9100 
+piccExchange => 90bd00000709000000c6000000 
+piccExchange rx <= b188a829d5a196f4040473bd3d1a3e770e24775496e724ef520899020d718c410ed420bcc564e9b017aad0cc9640d54991af 
+piccExchange => 90af000000 
+piccExchange rx <= 9696eb1f4c4cfe447b397bcca0cf57ce734694b388237128d1b6ef118671ff59213b05b957bc6847bc4c642e3035250391af 
+piccExchange => 90af000000 
+piccExchange rx <= 26bfa514b4ef557f8597d799e21e8b6b5b8df3d2fea4f3b282b28fce908da0aae4bc519e5f9582159019f0c3ef9c4a4591af 
+piccExchange => 90af000000 
+piccExchange rx <= 1cb26f8fb670689c3d5621ad8f590241d9a23abcaf160f191a8430c34e0b7aeb1b95f677d5762ac4cfc7a56c89687b0891af 
+piccExchange => 90af000000 
+piccExchange rx <= 8a5623ac976eb312dad38add8425615f9100 
+piccExchange => 906c0000010700 
+piccExchange rx <= 03f385d9bc1f16e3af514ba018385f0f9100 
+validate_card result : 
+10 
+outputData : 
+<?xml version="1.0" encoding="UTF-8"?>
+<TransaccionPenalizacion xsi:noNamespaceSchemaLocation="TransaccionPenalizacion.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<IdTransaccion>000000000400600000000</IdTransaccion>
+<IdTarjetaTIT>0000000004006</IdTarjetaTIT>
+<UidTarjeta>045D72CA8E2390</UidTarjeta>
+<EstadoTIT>0</EstadoTIT>
+<IdPerfil1>0</IdPerfil1>
+<IdPerfil2>0</IdPerfil2>
+<IdPerfil3>0</IdPerfil3>
+<IdTitulo1>0</IdTitulo1>
+<EstadoTitulo1>0</EstadoTitulo1>
+<EstadoTitulo2>0</EstadoTitulo2>
+<EstadoTitulo3>0</EstadoTitulo3>
+<NoTransaccionTIT>0</NoTransaccionTIT>
+<NoAccionTIT>0</NoAccionTIT>
+<NoAccionGrupoTIT>0</NoAccionGrupoTIT>
+<SaldoMonedero>0</SaldoMonedero>
+<UidSamEquipoCampo>04010103022801</UidSamEquipoCampo>
+<NoEtapaTransbordo>0</NoEtapaTransbordo>
+<NoPersonasDchoTransbordo>0</NoPersonasDchoTransbordo>
+<NoPersonasJuntasEtapa>0</NoPersonasJuntasEtapa>
+<IdOperadorServicioAnt>0</IdOperadorServicioAnt>
+<PuntoEntradaOpAnt>0</PuntoEntradaOpAnt>
+<NoZonasOperadorAnterior>0</NoZonasOperadorAnterior>
+<TarifaOperadorAnt>0</TarifaOperadorAnt>
+<IdOperadorServicio>0</IdOperadorServicio>
+<FechaHoraEntradaOp>1990-00-00T00:00:00</FechaHoraEntradaOp>
+<PuntoEntradaOp>0</PuntoEntradaOp>
+<TarifaNominal>0</TarifaNominal>
+<TarifaCalculada>0</TarifaCalculada>
+<CRC>EEBA8182D2E7E91F9C28608934E04AAF</CRC>
+</TransaccionPenalizacion>
+
+
+message : 
+{"acousticSignal":"","msgDisplay":"","visualSignal":""} 
+========READ FULL CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 04ab57ca8e2390214335303045259100 
+piccExchange => 90aa0000010700 
+piccExchange rx <= ad7f6c226334e3f318c916974afd0b4b91af 
+samExchange tx => 800a1100220900ad7f6c226334e3f318c916974afd0b4b04ab57ca8e239000 fb54a83571dc6fff 00 
+samExchange rx <= 537a9a5d12e6f49021c58e0f0ffdc881df39f03bec1cf75e7e532a2cf23c234290af 
+piccExchange => 90af000020537a9a5d12e6f49021c58e0f0ffdc881df39f03bec1cf75e7e532a2cf23c234200 
+piccExchange rx <= 0f753ce5c3721df8b180c731ad52df8b9100 
+samExchange tx => 800a0000100f753ce5c3721df8b180c731ad52df8b 
+samExchange rx <= 9000 
+samExchange tx => 80d5000000 
+samExchange rx <= 86bddb411e8a005e2629f5067faf38799000 
+piccExchange => 90bd0000070000000020000000 
+piccExchange rx <= 21e527516b3e869dd0c67a1f920415cb1c69895b39b26d44f7e27adda843a57e1c268d1b9b4deacfe041f3c70fa286229100 
+piccExchange => 90bd000007010000002f000000 
+piccExchange rx <= 7b81645006fa8cafe8235944e293aec2eb01ab4c31ea61e3b1586b46b38855c2a03e63ae4030b808975a7aa19215aee191af 
+piccExchange => 90af000000 
+piccExchange rx <= ce4a1f1a80dae0a942d6a98434121ed59100 
+piccExchange => 90bd0000070200000031000000 
+piccExchange rx <= 6a6ac17cb29b17bf804d7f28644fcc26b97ab3bb952e819814f72aba1c9022311021309f5d3aa9e0988e4e267c6988b891af 
+piccExchange => 90af000000 
+piccExchange rx <= ece2cd2c67ad99dcba1edc621e477fd49100 
+piccExchange => 90bd000007030000004e000000 
+piccExchange rx <= 24cc5f0c39b28cfd9d0842fcd1568cabdda83c74c3c2979c61e6e53095c6858408aaf9e84ca050b61e35c24248bcc9fa91af 
+piccExchange => 90af000000 
+piccExchange rx <= aefa5382e172dde813dc6fa768bcc291f26b4cbf933067e172923619feeefa43c4ce2a477b7657b4d6d9e800dd64cb9a9100 
+piccExchange => 90bd000007040000004e000000 
+piccExchange rx <= 1e07508444b68150ab8b37a4e7079cde94c118d11435cfb2bab43efd3177a2d27711730a3245bdf48e3c89d1e902123591af 
+piccExchange => 90af000000 
+piccExchange rx <= 2b5d2e5b3ed39273c3d6fcd1dbb44eddd3dfb99ff5775c8c55ea8af37f1493ec4666178ca4e9bf5ca8eb998a1480fab49100 
+piccExchange => 90bd000007050000004e000000 
+piccExchange rx <= dc5b3471387384304f688e7f6e0ad84b32f51384ada0d06f9a461ebaf74b3b17e163cb99ec80c8d1517bdcb1a29d321691af 
+piccExchange => 90af000000 
+piccExchange rx <= 8f3f24863ad6b4b76174edeb41dcbe62c51fe02134b9e1903c1d1b3301da1efc002312629bdf46ad9a6c85bdbee3b8279100 
+piccExchange => 906c0000010700 
+piccExchange rx <= 7061871ebd05ed2c21a90e53238358009100 
+piccExchange => 90bb0000070800000001000000 
+piccExchange rx <= 2baa3f0be10c4618c447fd5829b84104eab38db8002f1b5c056ced9e643bd87dd073494d963af852200c0c1973026a1a9100 
+piccExchange => 90bb0000070801000001000000 
+piccExchange rx <= e374a8bb27e7dc58611a18f232ff6d74ac36eeb4b9f219f7ad556b071c0a5c4eba77f237d14c20f7b62ab7dbd403398b9100 
+piccExchange => 90bb0000070802000001000000 
+piccExchange rx <= d6462aa24653d8605bd2fc020bf8bcdb5665e0124f7ff4f2810bbbdc31267ad8b2711bf151c36ea5ab53725fcb0f61f89100 
+piccExchange => 90bb0000070803000001000000 
+piccExchange rx <= dcb6b50da2b4e1ac5b1a582bb09f9023c34af5372726035ea8eca6f8d3a700db3baa32d4d2740cf95e47ae2d618b18569100 
+piccExchange => 90bb0000070804000001000000 
+piccExchange rx <= 7079c4bb2426db621174a65f3f878ced3176b575aaa0ebdb2b68ac454c51e3713c1c9d16cbd30e853bce4934439bfac49100 
+piccExchange => 90bb0000070805000001000000 
+piccExchange rx <= ec7ee5caea765f89e70324c87b2d55b8c07d59c5bc1e0a222490d282c3e7f5c0c6739a2b36b648e9d4a14fda8c056e1c9100 
+piccExchange => 90bb0000070806000001000000 
+piccExchange rx <= c0b28c16c3a36d29bce3f4287b902f283623ad8f6612761bf877925cab3eef82c503045b22f0e541af902be7ee44088f9100 
+piccExchange => 90bb0000070807000001000000 
+piccExchange rx <= cb9c279860aae2f0ede28aa029e59541d71835b038495c72c71d634bc914d42a81e86c1b3cf49b0a96b396ee68ebc77a9100 
+piccExchange => 90bb0000070808000001000000 
+piccExchange rx <= c9ef3566a9bd72b179e8bf2f000ff7713f8a27485bb7879a505459a074cd906dc535e8d98edb51ac81ff546ef51bb43c9100 
+piccExchange => 90bb0000070809000001000000 
+piccExchange rx <= 87d70fbf229aec8f7c64891ebd8034faa260294eea63ce8eae60a125833ac96d000a6baba2553344c64b3d0a497e04519100 
+piccExchange => 90bb000007080a000001000000 
+piccExchange rx <= e3c71eeead7f32780d6f0fbc23705db5db32fc2fe517b3aea1e69b948f9b9b625910caebc63042eab19a126f7e44407e9100 
+piccExchange => 90bb000007080b000001000000 
+piccExchange rx <= e7ab91d6f3b2e39730d03690e1eb4249df4e42c6bf3b1ef83f5496b31748a13d6763a381e0c8c6310b1c9acd349d2d949100 
+piccExchange => 90bb000007080c000001000000 
+piccExchange rx <= 4211029b6c80d6a0fcf44526a8995968b552851cd23ca7118c8f7f36d8ac07663adff9e32e18b24892280da96eccafe89100 
+piccExchange => 90bb000007080d000001000000 
+piccExchange rx <= b0737cfdc6a30c98ae4d914a21af1b70325adeb8cce962300c4406204a9b190cc81b4941995ef8e5c60083889355c2bd9100 
+piccExchange => 90bb000007080e000001000000 
+piccExchange rx <= 07e8dac9fc12fcc2557344944a0e1c8953fa7d9dbab1d6692fc3bbbd0cc1cc0c6e916116e4ad73ae8a0c54c6f638b18a9100 
+piccExchange => 90bb000007080f000001000000 
+piccExchange rx <= def7b10c83c650b9d7f7417d7b885c5edc8586cb209a3b3b07ac7cda305c86c3d485bb07a26cb8458378316a7f63a5d29100 
+piccExchange => 90bd00000709000000c6000000 
+piccExchange rx <= 38c1233398df5157bf5544cfc48c5ed4cb3620808c183237f289bab46230ae6f8f4aa8e8ef44420eb09044d4f4e034da91af 
+piccExchange => 90af000000 
+piccExchange rx <= acb9bf1abf47d77274e77774978e206fa474fb0349f2a0d80bcd5292713cad6eb39e275aca897cc759f331cdc2bc2c5991af 
+piccExchange => 90af000000 
+piccExchange rx <= 03e238df8ae7fdb5c5572fd7f6ba4ac4ab5952ab35a5e1b18be89da0c257e4c2beee05117fb3c816e6ff74b7e312cb6d91af 
+piccExchange => 90af000000 
+piccExchange rx <= 262999e1f214888bd9324ee955b6ddd2e0d8fc919e4a7c557bec0496bbd405a1cda1d0c37f0b992181ea60005afc183091af 
+piccExchange => 90af000000 
+piccExchange rx <= b17432031713d020aa3de463f6de2b029100 
+readFullCard result : 
+0 
+readFullCard outputData : 
+{
+    "UID": "04ab57ca8e2390",
+    "File0": {
+        "IDTarjetaTIT": "0000000004007",
+        "IdEmisorTIT": 14000,
+        "TipoTarjetaTIT": 0,
+        "VersionAplicacionTIT": 0,
+        "DisenoTarjetaTIT": 0,
+        "IdJuegosClavesTIT": 0,
+        "IdSAMInicializacionTIT": "043431FA8E7080",
+        "IdFabricanteTIT": 1,
+        "FechaHoraFabricacionTIT": "05/05/2026T16:05:58"
+    },
+    "File1": {
+        "NumeroClienteTIT": 0,
+        "FechaNacimientoClienteTIT": "00/00/0000",
+        "IdPerfil1": 0,
+        "IdEmpresaPerfil1": 0,
+        "DescuentoPerfil1": 0,
+        "FechaHoraInicioPerfil1": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil1": "00/00/1990T00:00:00",
+        "IdPerfil22": 0,
+        "IdEmpresaPerfil2": 0,
+        "DescuentoPerfil2": 0,
+        "FechaHoraInicioPerfil2": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil2": "00/00/1990T00:00:00",
+        "IdPerfil3": 0,
+        "IdEmpresaPerfil3": 0,
+        "DescuentoPerfil3": 0,
+        "FechaHoraInicioPerfil3": "00/00/1990T00:00:00",
+        "FechaHoraFinPerfil3": "00/00/1990T00:00:00"
+    },
+    "File2": {
+        "IdVendedorTIT": 0,
+        "IdPuntoVentaTIT": "00000000000000",
+        "FechaHoraVentaTIT": "00/00/1990T00:00:00",
+        "IdSAMVentaTIT": "00000000000000",
+        "Importe": 0,
+        "FormaPagoVentaTIT": 0,
+        "NAutorizacionEMVTIT": 0,
+        "FechaHoraInicioValidezTIT": "00/00/1990T00:00:00",
+        "FechaHoraFinValidezTIT": "00/00/1990T00:00:00",
+        "DNIClienteTIT": ""
+    },
+    "File3": {
+        "IdTitulo1": 0,
+        "TipoTitulo1": 0,
+        "FlagsCaracteristicasT1": 0,
+        "IdEmpresaTitulo1": 0,
+        "NoTransaccionTITTitulo1": 0,
+        "IdVendedorTitulo1": 0,
+        "IdPuntoVentaTitulo1": "00000000000000",
+        "FechaHoraVentaTitulo1": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo1": "00000000000000",
+        "ImporteTitulo1": 0,
+        "FormaPagoVentaTitulo1": 0,
+        "NoAutorizacionEMVTitulo1": 0,
+        "MultipersonaTitulo1": 0,
+        "SeleccionOperadores1T1": "000000000000",
+        "SeleccionZonas1T1": 0,
+        "SeleccionOperadores2T1": "000000000000",
+        "SeleccionZonas2T1": "0",
+        "FechaHoraInicioCadT1": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT1": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo1": 0,
+        "ValidezDiariaT1": 0,
+        "ValidezHorariaT1": 0,
+        "LimiteViajesT1": 0,
+        "LimiteViajesDiaT1": 0,
+        "UltimoBonoT1": 0
+    },
+    "File4": {
+        "IdTitulo2": 0,
+        "TipoTitulo2": 0,
+        "FlagsCaracteristicasT2": 0,
+        "IdEmpresaTitulo2": 0,
+        "NoTransaccionTITTitulo2": 0,
+        "IdVendedorTitulo2": 0,
+        "IdPuntoVentaTitulo2": "00000000000000",
+        "FechaHoraVentaTitulo2": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo2": "00000000000000",
+        "ImporteTitulo2": 0,
+        "FormaPagoVentaTitulo2": 0,
+        "NoAutorizacionEMVTitulo2": 0,
+        "MultipersonaTitulo2": 0,
+        "SeleccionOperadores1T2": "000000000000",
+        "SeleccionZonas1T2": 0,
+        "SeleccionOperadores2T2": "000000000000",
+        "SeleccionZonas2T2": "0",
+        "FechaHoraInicioCadT2": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT2": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo2": 0,
+        "ValidezDiariaT2": 0,
+        "ValidezHorariaT2": 0,
+        "LimiteViajesT2": 0,
+        "LimiteViajesDiaT2": 0,
+        "UltimoBonoT2": 0
+    },
+    "File5": {
+        "IdTitulo3": 0,
+        "TipoTitulo3": 0,
+        "FlagsCaracteristicasT3": 0,
+        "IdEmpresaTitulo3": 0,
+        "NoTransaccionTITTitulo3": 0,
+        "IdVendedorTitulo3": 0,
+        "IdPuntoVentaTitulo3": "00000000000000",
+        "FechaHoraVentaTitulo3": "00/00/1990T00:00:00",
+        "IdSAMVentaTitulo3": "00000000000000",
+        "ImporteTitulo3": 0,
+        "FormaPagoVentaTitulo3": 0,
+        "NoAutorizacionEMVTitulo3": 0,
+        "MultipersonaTitulo3": 0,
+        "SeleccionOperadores1T3": "000000000000",
+        "SeleccionZonas1T3": 0,
+        "SeleccionOperadores2T3": "000000000000",
+        "SeleccionZonas2T3": "0",
+        "FechaHoraInicioCadT3": "00/00/1990T00:00:00",
+        "FechaHoraFinCadT3": "00/00/1990T00:00:00",
+        "TiempoActivacionTitulo3": 0,
+        "ValidezDiariaT3": 0,
+        "ValidezHorariaT3": 0,
+        "LimiteViajesT3": 0,
+        "LimiteViajesDiaT3": 0,
+        "UltimoBonoT3": 0
+    },
+    "File7_Valor": 0,
+    "File8": [
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        },
+        {
+            "IdTransaccion": 0,
+            "FechaHoraTransaccion": "00/00/1990T00:00:00",
+            "IdTipoTransaccion": 0,
+            "IdTitulo": 0,
+            "IdOperadorServicio": 0,
+            "IdPuntoTransaccion": "00000000000000",
+            "UnidadesDescontadas": 0,
+            "UnidadesRestantes": 0
+        }
+    ],
+    "File9": {
+        "EstadoTIT": 0,
+        "NotransaccionTIT": 0,
+        "NoAccionTIT": 0,
+        "NoAccionGrupoTIT": 0,
+        "EstadoTitulo1": 0,
+        "EstadoTitulo2": 0,
+        "EstadoTitulo3": 0,
+        "PrioridadTitulo1": 0,
+        "PrioridadTitulo2": 0,
+        "PrioridadTitulo3": 0,
+        "FlagsControlViaje": "000000000000000000000000",
+        "NoEtapaTransbordo": 0,
+        "NoPersonasEntrada": 0,
+        "NoPersonasJuntasEtapa1": 0,
+        "NoPersonasJuntasEtapa2": 0,
+        "NoPersonasJuntasEtapa3": 0,
+        "TarifaAcumuladaViaje": 0,
+        "NoZonasOperador": 0,
+        "NoZonasOperadorAnterior": 0,
+        "NoZonasOperadorAntAnt": 0,
+        "NoTransaccionEntradaPase": 0,
+        "NoPosicionTituloValidado": 0,
+        "IdOperadorServicioInicial": 0,
+        "FechaHoraEntradaOpInicial": "00/00/1990T00:00:00",
+        "PuntoEntradaOpInicial": "00000000000000",
+        "TarifaOperadorInicial": 0,
+        "IdOperadorServicioAnt": 0,
+        "FechaHoraEntradaOpAnt": "00/00/1990T00:00:00",
+        "PuntoEntradaOpAnt": "00000000000000",
+        "TarifaOperadorAnt": 0,
+        "IdOperadorServicio": 0,
+        "FechaHoraEntradaOp": "00/00/1990T00:00:00",
+        "PuntoEntradaOp": "00000000000000",
+        "TarifaOperador": 0,
+        "FechaHoraSalidaOp": "00/00/1990T00:00:00",
+        "PuntoSalidaOp": "00000000000000",
+        "IdOperadorServicioComp": 0,
+        "FechaHoraEntradaOpComp": "00/00/1990T00:00:00",
+        "PuntoEntradaOpComp": "00000000000000",
+        "TarifaOperadorComp": 0,
+        "NoPersonasEntradaComp": 0,
+        "NoPersonasJuntasComp": 0,
+        "NoPosicionPaseValidado": 0,
+        "IdOperadorServicioPase": 0,
+        "FechaHoraEntradaOpPase": "00/00/1990T00:00:00",
+        "PuntoEntradaOpPase": "00000000000000",
+        "TipoValidacionPase": 0,
+        "NoViajesAcumuladosPase": 0,
+        "FechaHoraInicioActT1": "00/00/1990T00:00:00",
+        "FechaHoraFinActT1": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT1": 0,
+        "SaldoLimiteViajesDiaT1": 0,
+        "FechaHoraLimiteDiaT1": "00/00/1990T00:00:00",
+        "SaldoBonoT1": 0,
+        "FechaHoraInicioActT2": "00/00/1990T00:00:00",
+        "FechaHoraFinActT2": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT2": 0,
+        "SaldoLimiteViajesDiaT2": 0,
+        "FechaHoraLimiteDiaT2": "00/00/1990T00:00:00",
+        "SaldoBonoT2": 0,
+        "FechaHoraInicioActT3": "00/00/1990T00:00:00",
+        "FechaHoraFinActT3": "00/00/1990T00:00:00",
+        "SaldoLimiteViajesT3": 0,
+        "SaldoLimiteViajesDiaT3": 0,
+        "FechaHoraLimiteDiaT3": "00/00/1990T00:00:00",
+        "SaldoBonoT3": 0
+    }
+} 
+========VALIDATION CARD==== 
+piccExchange => 905a000003f2106000 
+piccExchange rx <= 9100 
+piccExchange => 9060000000 
+piccExchange rx <= 0401013300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 0401010300160591af 
+piccExchange => 90af000000 
+piccExchange rx <= 04ab57ca8e2390214335303045259100 
+piccExchange => 90aa0000010700 
+piccExchange rx <= b3f9d8038fa234b750574f8a4005562d91af 
+samExchange tx => 800a1100220900b3f9d8038fa234b750574f8a4005562d04ab57ca8e239000fb54a83571dc6fff00 
+samExchange rx <= 572b6a3b69d669c2a676d3322267e51b69039934e51ea044ae4158a695a144f390af 
+piccExchange => 90af000020572b6a3b69d669c2a676d3322267e51b69039934e51ea044ae4158a695a144f300 
+piccExchange rx <= 326d7e713a3baecb6455594845fd700f9100 
+samExchange tx => 800a000010326d7e713a3baecb6455594845fd700f 
+samExchange rx <= 9000 
+samExchange tx => 80d5000000 
+samExchange rx <= 491e00650086f033469af5c71a0bde689000 
+piccExchange => 90bd0000070000000020000000 
+piccExchange rx <= 5c9c672e620d1b89a911e3395305ff8d0c9c20ae4c096a845380650210c0b35043262868fb75240fc8d1cff921f5531f9100 
+piccExchange => 90bd000007010000002f000000 
+piccExchange rx <= ab71578800f85acc1d257bff7c5271560c9557886078386b2d6ba6bcf6931a8d478c74cd1a06be77478edff676a46eed91af 
+piccExchange => 90af000000 
+piccExchange rx <= 293f34ac22e3694ab7fae1b0057f75a09100 
+piccExchange => 90bd0000070200000031000000 
+piccExchange rx <= 457a72c76dffe741e9d3d32ef1d920fcac964b00e8dc3cc21d7c48aea0859c807088604721d729be638b04fceaece78991af 
+piccExchange => 90af000000 
+piccExchange rx <= cd6b6b0a5455c024213bc8246142a2bb9100 
+piccExchange => 90bd00000709000000c6000000 
+piccExchange rx <= 3a422b887e054c6d650e4ca92b3dfa245bcd68ff8df3582a3277ce44c3781e1d66e0fdc7b6b7bd808c6673cb798bfd4191af 
+piccExchange => 90af000000 
+piccExchange rx <= 3246db3a109e89966c84d83070c8ca7c02a029883010e611c4e5fe44a42c7d50a43ce40855c2a2dd4545ae7c23ce49a391af 
+piccExchange => 90af000000 
+piccExchange rx <= 896bd171d45b5bd7934c7fd9d42c85c71ab5ec46dcda887528137541eca12c8d319a69553c540a833ea7174aa40de01891af 
+piccExchange => 90af000000 
+piccExchange rx <= ae896b728515cdac768201a2268158f819e52dfc9a13c9d07f54d4041e12a887662dae77885e0842d3c7f4abaa7d1e9591af 
+piccExchange => 90af000000 
+piccExchange rx <= 103d597004c9fa1f7e740f8dee46d22e9100 
+piccExchange => 906c0000010700 
+piccExchange rx <= 66f8ddd31c63ba4568bfedc77ec811a29100 
+validate_card result : 
+10 
+outputData : 
+<?xml version="1.0" encoding="UTF-8"?>
+<TransaccionPenalizacion xsi:noNamespaceSchemaLocation="TransaccionPenalizacion.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<IdTransaccion>000000000400700000000</IdTransaccion>
+<IdTarjetaTIT>0000000004007</IdTarjetaTIT>
+<UidTarjeta>04AB57CA8E2390</UidTarjeta>
+<EstadoTIT>0</EstadoTIT>
+<IdPerfil1>0</IdPerfil1>
+<IdPerfil2>0</IdPerfil2>
+<IdPerfil3>0</IdPerfil3>
+<IdTitulo1>0</IdTitulo1>
+<EstadoTitulo1>0</EstadoTitulo1>
+<EstadoTitulo2>0</EstadoTitulo2>
+<EstadoTitulo3>0</EstadoTitulo3>
+<NoTransaccionTIT>0</NoTransaccionTIT>
+<NoAccionTIT>0</NoAccionTIT>
+<NoAccionGrupoTIT>0</NoAccionGrupoTIT>
+<SaldoMonedero>0</SaldoMonedero>
+<UidSamEquipoCampo>04010103022801</UidSamEquipoCampo>
+<NoEtapaTransbordo>0</NoEtapaTransbordo>
+<NoPersonasDchoTransbordo>0</NoPersonasDchoTransbordo>
+<NoPersonasJuntasEtapa>0</NoPersonasJuntasEtapa>
+<IdOperadorServicioAnt>0</IdOperadorServicioAnt>
+<PuntoEntradaOpAnt>0</PuntoEntradaOpAnt>
+<NoZonasOperadorAnterior>0</NoZonasOperadorAnterior>
+<TarifaOperadorAnt>0</TarifaOperadorAnt>
+<IdOperadorServicio>0</IdOperadorServicio>
+<FechaHoraEntradaOp>1990-00-00T00:00:00</FechaHoraEntradaOp>
+<PuntoEntradaOp>0</PuntoEntradaOp>
+<TarifaNominal>0</TarifaNominal>
+<TarifaCalculada>0</TarifaCalculada>
+<CRC>6C38F160F2701ED8D1796E675E32984F</CRC>
+</TransaccionPenalizacion>
+
+
+message : 
+{"acousticSignal":"","msgDisplay":"","visualSignal":""} 

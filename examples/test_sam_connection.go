@@ -71,7 +71,7 @@ func main() {
 			log.Printf("Failed to authenticate SAM: %v", err)
 			continue
 		}
-		log.Println("✅ SAM host authentication successful")
+		log.Println("SAM host authentication successful")
 		
 		// time.Sleep(1000 * time.Millisecond) // o 100ms si quieres ser seguro
 
@@ -175,6 +175,19 @@ func authenticateSam(sam samav2.SamAv2) error {
 	return nil
 }
 
+// buildDivInput constructs the 16-byte diversification input from a 7-byte UID.
+// Formula: UID || 0x00 || NOT(UID) || 0xFF
+func buildDivInput(uid []byte) []byte {
+	divInput := make([]byte, 16)
+	copy(divInput[0:7], uid)
+	divInput[7] = 0x00
+	for i := 0; i < 7; i++ {
+		divInput[8+i] = ^uid[i]
+	}
+	divInput[15] = 0xFF
+	return divInput
+}
+
 func authenticatePiccWithSam(sam samav2.SamAv2) error {
 	// Connect to PICC reader (typically slot 0 for ACR1581U)
 	ctx, err := pcsc.NewContext()
@@ -228,7 +241,9 @@ func authenticatePiccWithSam(sam samav2.SamAv2) error {
 	}
 	log.Printf("PICC GET VERSION response: % X", response)
 	
-	// Continue with additional frames if needed (90 AF)
+	// Continue with additional frames if needed (90 AF).
+	// The last frame contains the UID in the first 7 bytes of the response data.
+	var uid []byte
 	for response[len(response)-1] == 0xAF {
 		continueCmd := []byte{0x90, 0xAF, 0x00, 0x00, 0x00}
 		response, err = piccCard.Apdu(continueCmd)
@@ -237,7 +252,13 @@ func authenticatePiccWithSam(sam samav2.SamAv2) error {
 		}
 		log.Printf("PICC VERSION continue: % X", response)
 	}
-	
+	// Last frame ends with 0x91 0x00 — data before status bytes contains the UID.
+	if len(response) < 9 {
+		return fmt.Errorf("unexpected PICC version response length: % X", response)
+	}
+	uid = response[0:7]
+	log.Printf("UID extracted from GET VERSION: % X", uid)
+
 	// PICC AUTH AES (90 AA) - key 0x07
 	authCmd := []byte{0x90, 0xAA, 0x00, 0x00, 0x01, 0x07, 0x00}
 	response, err = piccCard.Apdu(authCmd)
@@ -245,29 +266,21 @@ func authenticatePiccWithSam(sam samav2.SamAv2) error {
 		return fmt.Errorf("failed to start PICC authentication: %v", err)
 	}
 	log.Printf("PICC AUTH AES response: % X", response)
-	
+
 	if len(response) < 16 || response[len(response)-1] != 0xAF {
 		return fmt.Errorf("invalid PICC auth response: % X", response)
 	}
-	
-	// Extract encrypted RndB from PICC response  
+
+	// Extract encrypted RndB from PICC response
 	encRndB := response[0:16]
-	
-	// Extract UID from previous PICC VERSION response - get last 7 bytes before status
-	// From logs: UID is part of the version response  
-	// uid := []byte{0x04, 0x2F, 0x76, 0xCA, 0x8E, 0x23, 0x90} // From logs: 042f76ca8e2390
-	
-	// SAM AUTH PICC Part 1 - Based on logs structure  
-	// divInput from logs: 042f76ca8e239000fbd0893571dc6fff (16 bytes exactly)
-	divInput := []byte{0x04, 0x2F, 0x76, 0xCA, 0x8E, 0x23, 0x90, 0x00, 0xFB, 0xD0, 0x89, 0x35, 0x71, 0xDC, 0x6F, 0xFF}
-	// divInput := []byte{0x04, 0x2F, 0x76, 0xCA, 0x8E, 0x23, 0x90, 0x00, 0xFB, 0xD0, 0x89, 0x50, 0x50, 0xDC, 0x6F, 0xFF}
+
+	// Build divInput dynamically: UID || 0x00 || NOT(UID) || 0xFF
+	divInput := buildDivInput(uid)
+	log.Printf("divInput: % X", divInput)
 
 	authMode := 0x11
-	
-	// Try different key numbers - first try 0x00 (default), then others
-	// keyNumbers := []int{0x00, 0x07, 0x09, 0x01, 0x02, 0x03}
+
 	keyNumbers := []int{0x09}
-	// keyNumbers := []int{0x07}
 	var samResponse []byte
 	var successKeyNo int = -1
 	

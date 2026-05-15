@@ -114,7 +114,7 @@ func (c *Scard) DisconnectEjectCard() error {
 
 // Apdu Primitive function (SCardTransmit) to send command to card
 func (c *Scard) Apdu(apdu []byte) ([]byte, error) {
-	log.Printf("TX => [%X]", apdu)
+	log.Printf("TX => [% X]", apdu)
 	if c.State != CONNECTED {
 		return nil, fmt.Errorf("don't Connect to Card, %w", smartcard.ErrComm)
 	}
@@ -151,7 +151,7 @@ func (c *Scard) Apdu(apdu []byte) ([]byte, error) {
 	case resp := <-ch:
 		// fmt.Printf("Response: [% X], len: %d\n", resp, len(resp))
 		result := make([]byte, len(resp))
-		log.Printf("\tRX => [%X]", resp)
+		log.Printf("\tRX => [% X]", resp)
 		copy(result, resp)
 		return result, nil
 	case err := <-chErr:
