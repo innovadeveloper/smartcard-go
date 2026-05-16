@@ -37,7 +37,8 @@ func main() {
 		// ACR1581U typically shows as "ACS ACR1581U 00 01" for slot 1 (SAM)
 		if strings.Contains(strings.ToUpper(readerName), "SAM") || 
 		//    strings.Contains(readerName, "01") || 
-		   strings.Contains(readerName, "ACS ACR1581 1S Dual Reader(3)") { // Slot 1 is typically SAM
+		   strings.Contains(readerName, "ACS ACR1581 1S Dual Reader(3)") ||  // Slot 1 is typically SAM
+		   strings.Contains(readerName, "ACS ACR1581 1S Dual Reader SAM") { // Slot 1 is typically SAM
 			log.Printf("Found potential SAM reader: %s", readerName)
 			samReaders = append(samReaders, pcsc.NewReader(ctx, readerName))
 		}
@@ -181,6 +182,7 @@ func buildDivInput(uid []byte) []byte {
 	divInput := make([]byte, 16)
 	copy(divInput[0:7], uid)
 	divInput[7] = 0x00
+	// divInput[7] = 0x01	// fail
 	for i := 0; i < 7; i++ {
 		divInput[8+i] = ^uid[i]
 	}
@@ -205,7 +207,8 @@ func authenticatePiccWithSam(sam samav2.SamAv2) error {
 	var piccReader pcsc.Reader
 	for _, readerName := range readers {
 		// if strings.Contains(readerName, "ACS ACR1581 1S Dual Reader") && !strings.Contains(readerName, "(3)") {
-		if strings.Contains(readerName, "ACS ACR1581 1S Dual Reader(1)") {
+		if strings.Contains(readerName, "ACS ACR1581 1S Dual Reader(1)") ||
+		strings.Contains(readerName, "ACS ACR1581 1S Dual Reader PICC") {
 			log.Printf("Found PICC reader: %s", readerName)
 			piccReader = pcsc.NewReader(ctx, readerName)
 			break
@@ -275,7 +278,18 @@ func authenticatePiccWithSam(sam samav2.SamAv2) error {
 	encRndB := response[0:16]
 
 	// Build divInput dynamically: UID || 0x00 || NOT(UID) || 0xFF
-	divInput := buildDivInput(uid)
+	// divInput := buildDivInput(uid)
+
+	// 04 5D 72 CA 8E 23 
+	// 90 00 FB A2 8D 35 
+	// 71 DC 6F FF
+
+	divInput := []byte{
+		0x04, 0x5D, 0x72, 0xCA, 0x8E, 0x23, 0x90,
+		0x00, 0xFB, 0xA2, 0x8D,
+		0x35, 0x70, /* 0x71 */ 0xDC, 0x6F,
+		0xFF,
+	}
 	log.Printf("divInput: % X", divInput)
 
 	authMode := 0x11
